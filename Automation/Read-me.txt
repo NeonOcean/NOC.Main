@@ -1,0 +1,2 @@
+Running Build.py will build the site. 
+This setup will build everything, it has no external requirements.

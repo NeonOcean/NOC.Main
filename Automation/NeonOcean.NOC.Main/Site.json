@@ -1,0 +1,8 @@
+{
+	"Namespace": "NeonOcean.NOC.Main",
+	"Domain": "https://www.neonoceancreations.com",
+	"Github Name": "NOC.Main",
+	"Sitemap Excluded": [
+		"404.html"
+	]
+}

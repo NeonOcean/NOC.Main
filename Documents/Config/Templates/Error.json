@@ -1,0 +1,14 @@
+{
+	"Document": {
+		"Template": "Universal.html",
+
+		"Formatting": {
+			"Title": "Title",
+			"Description": "Description",
+
+			"Base Path": "Base Path",
+
+			"Content": "Content"
+		}
+	}
+}
