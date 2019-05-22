@@ -42,7 +42,7 @@ OverviewTabFormattingTemplate = {
 FilesTabFormattingTemplate = {
 	"InstallerURL": lambda modConfig: _distributionURL + "/mods/" + modConfig.Namespace.lower() + "/installer",
 	"FilesURL": lambda modConfig: _distributionURL + "/mods/" + modConfig.Namespace.lower() + "/files",
-	"FilesInstallationGuideURL": lambda modConfig: _documentationURL + "/s4/" + modConfig.Mod.GetName().lower() + "/installation" if modConfig.Mod.GetName() is not None else _documentationURL,
+	"FilesInstallationGuideURL": lambda modConfig: _documentationURL + "/s4/" + modConfig.Mod.GetName().lower() + "/general/installation" if modConfig.Mod.GetName() is not None else _documentationURL,
 
 	"SourcesURL": lambda modConfig: _distributionURL + "/mods/" + modConfig.Namespace.lower() + "/sources",
 	
@@ -54,7 +54,7 @@ RequirementsTabFormattingTemplate = {
 }  # type: typing.Dict[str, typing.Callable[[Mods.ModConfig], typing.Any]]
 
 IssuesTabFormattingTemplate = {
-	"BugReportingGuideURL": lambda modConfig: _documentationURL + "/s4/" + modConfig.Mod.GetName().lower() + "/reporting-bugs" if modConfig.Mod.GetName() is not None else _documentationURL,
+	"BugReportingGuideURL": lambda modConfig: _documentationURL + "/s4/" + modConfig.Mod.GetName().lower() + "/general/reporting-bugs" if modConfig.Mod.GetName() is not None else _documentationURL,
 }  # type: typing.Dict[str, typing.Callable[[Mods.ModConfig], typing.Any]]
 
 ChangesTabFormattingTemplate = {
