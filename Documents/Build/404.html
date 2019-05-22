@@ -2,38 +2,156 @@
 <html lang = "en">
 	<head>
 		<title>404 page not found</title>
-		<meta name = "description" content = "" />
+		<meta charset="utf-8"/>
+		
+		<meta name = "dark_page" content = "false" />
 		
 		<base href = "https://www.neonoceancreations.com" />
 		
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 		
 		<link rel = "stylesheet" type = "text/css" href = "styles/content.css" />
+		<link rel = "stylesheet" type = "text/css" href = "styles/dark.css" />
+		<link rel = "stylesheet" type = "text/css" href = "styles/error.css" />
+		<link rel = "stylesheet" type = "text/css" href = "styles/mod.css" />
+		<link rel = "stylesheet" type = "text/css" href = "styles/mod-list.css" />
+		<link rel = "stylesheet" type = "text/css" href = "styles/special.css" />
 		<link rel = "stylesheet" type = "text/css" href = "styles/universal.css" />
 		
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122165204-3"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122165204-5"></script>
 		<script src = "scripts/analytics.js"></script>
+		<script src = "scripts/analytics-events.js"></script>
 		<script src = "scripts/content.js"></script>
+		<script src = "scripts/dark.js"></script>
+		<script src = "scripts/mod.js"></script>
+		
+		<meta name="robots" content="noindex">
 	</head>
 
 	<body>
-		<div class = "Document">
-			<div class = "Content_Container">
-				<div class = "Content">
-					<div class = "Content_Offset"><!--
-						--><div class = "Error_Message_Container">
-							<div class = "Error_Message">
-								<h1>404</h1><br />
-								This site isn't finished yet, but heres some links to download my currently released mods<br />
-								</br>
-								<a href = "https://dist.mods.neonoceancreations.com/mods/neonocean.main/files.html">NeonOcean.Main</a></br>
-								<a href = "https://dist.mods.neonoceancreations.com/mods/neonocean.debug/files.html">NeonOcean.Debug</a></br>
-								<a href = "https://dist.mods.neonoceancreations.com/mods/neonocean.order/files.html">NeonOcean.Order</a>
-							</div>
-						</div><!--
+		<div id = "Dark_Page_Dialog" class = "Dark_Dialog_Background" style = "display:none">
+			<div class = "Dark_Dialog_Container">
+				<div class = "Dark_Dialog">
+					<div id = "Dark_Page_Dialog_Text" class = "Dark_Dialog_Text"><!--
+						-->This page contains sexy content, you must be 18 years or older to view it. You can click continue to enable dark mode and view the page, otherwise you should go back to a safe page.<!--
 					--></div>
+					
+					<span id = "Dark_Page_Dialog_Continue_Button" class = "Dark_Dialog_Continue_Button" onclick = "Dark_PageDialogCallback(); AnalyticEvents_DarkPageDialogResponse('Continue');">
+						<div class = "Dark_Dialog_Continue_Button_Text"><!--
+							-->Continue<!--
+						--></div>
+					</span>
 				</div>
 			</div>
+		</div>
+		
+		<div id = "Dark_Enable_Dialog" class = "Dark_Dialog_Background" style = "display:none">
+			<div class = "Dark_Dialog_Container">
+				<div class = "Dark_Dialog">					
+					<div id = "Dark_Enable_Dialog_Text" class = "Dark_Dialog_Text"><!--
+						-->Enabling dark mode will allow you to view sexy content across this site. You must be 18 years or older to use it.<!--
+					--></div>
+					
+					<span class = "Dark_Dialog_Continue_Button" onclick = "Dark_EnableDialogCallback(true); AnalyticEvents_DarkEnableDialogResponse('Continue');">
+						<div class = "Dark_Dialog_Continue_Button_Text"><!--
+							-->Continue<!--
+						--></div>
+					</span>
+					
+					<span class = "Dark_Dialog_Back_Button" onclick = "Dark_EnableDialogCallback(false); AnalyticEvents_DarkEnableDialogResponse('Back');">
+						<div class = "Dark_Dialog_Back_Button_Text"><!--
+							-->Back<!--
+					--></div>
+					</span>
+				</div>
+			</div>
+		</div>
+	
+		<div class = "Document">
+			<div class = "Header_Container">
+				<div class = "Header">
+					<div class = "Header_Row">
+						<span class = "Header_Logo">
+							<a class = "Header_Logo_Link" href = ""><!--
+								-->NeonOcean<!--
+							--></a>
+						</span>
+						
+						<span class = "Header_Dark_Checkbox_Container">
+							<span id = "Header_Dark_Checkbox_Enabled" class = "Header_Dark_Checkbox" style = "display: none" onclick = "Dark_Disable(); AnalyticEvents_ClickedDarkModeToggle('Disabling');">
+								<span class = "Header_Dark_Checkbox_Text"><!--
+									-->Dark mode<br/>
+									<sub>(enabled)</sub><!--
+								--></span>
+								<img class = "Header_Dark_Checkbox_Image" src = "images/dark-checkbox-1.png" />
+							</span>
+							
+							<span id = "Header_Dark_Checkbox_Disabled" class = "Header_Dark_Checkbox" style = "display: none" onclick = "Dark_ShowEnableDialog(); AnalyticEvents_ClickedDarkModeToggle('Enabling');">
+								<span class = "Header_Dark_Checkbox_Text"><!--
+									-->Dark mode<br/>
+									<sub>(disabled)</sub><!--
+								--></span>
+								<img class = "Header_Dark_Checkbox_Image" src = "images/dark-checkbox-0.png" />
+							</span>
+						</span>
+					</div>
+					
+					<div class = "Header_Row">
+						<span class = "Header_Section_Container">
+							<span class = "Header_Section">
+								<a class = "Header_Section_Link" href = ""><!--
+									-->Home<!--
+								--></a>
+							</span>
+							
+							<span class = "Header_Section">
+								<a class = "Header_Section_Link" href = "mods"><!--
+									-->Mods<!--
+								--></a>
+							</span>
+							
+							<span class = "Header_Section">
+								<a class = "Header_Section_Link" href = "about"><!--
+									-->About<!--
+								--></a>
+							</span>
+						</span>
+						
+						<span class = "Header_External_Container">
+							<span id = "Header_External_Twitter" class = "Header_External">
+								<a id = "Header_External_Twitter_Link" class = "Header_External_Link" href = "https://github.com/NeonOcean">
+									<img id = "Header_External_Twitter_Link_Button" class = "Header_External_Link_Button" src = "images/github-button.png"></img>
+								</a>
+							</span>
+							
+							<span id = "Header_External_Twitter" class = "Header_External" style = "display: none">
+								<a id = "Header_External_Twitter_Link" class = "Header_External_Link" href = "https://www.twitter.com/NeonOceanProper">
+									<img id = "Header_External_Twitter_Link_Button" class = "Header_External_Link_Button" src = "images/twitter-button.png"></img>
+								</a>
+							</span>
+						
+							<span id = "Header_External_Patreon" class = "Header_External">
+								<a id = "Header_External_Patreon_Link" class = "Header_External_Link" href = "https://www.patreon.com/NeonOcean">
+									<img id = "Header_External_Patreon_Link_Button" class = "Header_External_Link_Button" src = "images/patron-button.png"></img>
+								</a>
+							</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		
+			<div class = "Content_Container">
+				<div class = "Content"><!--
+					--><div class = "Error_Message_Container">
+						<span class = "Error_Message">
+							<h1>404</h1><br />
+							Page not found
+						</span>
+					</div><!--
+				--></div>
+			</div>
+			
+			<div class = "Footer" />
 		</div>
 	</body>
 </html>

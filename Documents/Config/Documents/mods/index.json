@@ -1,0 +1,23 @@
+{
+	"FileExtension": "html",
+
+	"Values": {
+		"Title": "NeonOcean - Mods",
+		
+		"BasePath": "../../..",
+		
+		"DarkPage": "false",
+		
+		"HeaderExtra": ""
+	},
+	
+	"Scripts": {
+		"Content": {
+			"Module": "Site_NeonOcean_NOC_Main.Scripts.ModLists",
+			"Function": "GetModListText",
+			"Inputs": []
+		}
+	},
+
+	"TemplateConfig": "Normal.json"
+}

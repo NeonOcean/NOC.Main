@@ -1,0 +1,221 @@
+div.Mod_Header {
+	
+}
+
+img.Mod_Header_Banner {
+	float: left;
+	
+	width: 100%;
+}
+
+span.Mod_Header_Name {
+	width: 200px;
+	height: 40px;
+	
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
+	display: inline-block;
+	
+	float: left;
+	
+	line-height: 38px;
+	
+	font-size: 26px;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+}
+
+.Mod_Header_Button_Container {
+	height: 40px;
+	
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
+	float: right;
+}
+
+.Mod_Header_Button {
+	width: 200px;
+	height: 40px;
+	
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 4px;
+		
+	display: inline-block;
+	
+	text-align: center;
+	line-height: 38px;
+	
+	text-decoration: none;
+	
+	cursor: pointer;
+	
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	
+	color: initial;
+}
+
+#Mod_Header_Documentation_Button {
+	background-color: #e1ffe1; /* No named colors are as pale of a green as I wanted thus I am taking this color and dubbing it Eiffel Green (because the hex code spells eiffel wow)*/
+	border-color: #e1ffe1;
+}
+
+#Mod_Header_Download_Button {
+	background-color: mistyrose;
+	border-color: mistyrose;
+}
+
+.Mod_Header_Button_Text {
+	width: 100%;
+	height: 100%;
+	
+	position: relative;
+}
+
+table.Mod_Strip {
+	width: 100%;
+	height: 50px;
+	
+	border-color: lightgray;
+	border-width: 1px;
+	border-style: solid;
+	
+	background-color: aliceblue;
+}
+
+th.Mod_Strip_Item {
+	width: 33.333%;
+	
+	position: relative;
+	
+	display: inline-block;
+	text-align: center;
+	
+	font-weight: normal;
+}
+
+div.Mod_Tab_Buttons {
+	width: 100%;
+	height: 50px;
+	
+	margin-top: 25px;
+	
+	border-collapse: collapse;
+}
+
+span.Mod_Tab_Button, span.Mod_Tab_Button_Active {
+	width: 150px;
+	height: 50px;
+	
+	position: relative;
+	
+	display: table-cell;
+	text-align: center;
+	
+	border-style: solid;
+	border-color: lightgray;
+	border-width: 1px;
+	
+	font-weight: normal;
+	
+	background-color: aliceblue;
+	
+	cursor: pointer;
+	
+	vertical-align: middle;
+}
+
+span.Mod_Tab_Button_Active {
+	background-color: lavender;
+}
+
+div.Mod_Tabs {
+	min-height: 250px;
+	
+	padding: 25px;
+	
+	padding-right: 50px;
+	padding-left: 50px;
+	
+	border-style: solid;
+	border-color: lightgray;
+	border-width: 1px;
+}
+
+div.Mod_Download {
+	height: 125px;
+	  
+	border-style: solid;
+	border-color: gainsboro;
+	border-width: 1px;
+}
+
+div.Mod_Download_Header {
+	height: 40px;
+	line-height: 40px;
+	
+	padding-left: 25px;
+	padding-right: 25px;
+	
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: lightgray;
+	
+	background-color: aliceblue;
+}
+
+span.Mod_Download_Name {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+a.Mod_Download_Button {
+	width: 125px;
+	height: 30px;
+	
+	float: right;
+	
+	margin-top: 5px;
+	margin-bottom: 5px;
+	
+	border-style: solid;
+	border-width: 2px;
+	border-color: mistyrose;
+	border-radius: 4px;
+	
+	line-height: 30px;
+	
+	background-color: mistyrose;
+	
+	text-decoration: none;
+	color: initial;
+	
+	text-align: center;
+}
+
+div.Mod_Header_Download_Button_Text {
+	height: 100%;	
+}
+
+div.Mod_Download {
+	margin-bottom: 50px;
+}
+
+div.Mod_Download_Description {
+	margin-top: 5px;
+	padding-left: 25px;
+	padding-right: 25px;
+	overflow-y: hidden;
+}
+
+div.Mod_Tab hr {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+

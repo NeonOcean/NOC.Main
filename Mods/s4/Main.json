@@ -1,0 +1,17 @@
+{
+	"Namespace": "NeonOcean.Main",
+	"Name": "Main",
+	"PageURL": "mods/s4/main",
+	"BannerURL": "mods/s4/main/banner.png",
+	"PreviewURL": "mods/s4/main/preview.png",
+	"GameIdentifier": "s4",
+	
+	"Description": "Main is a mod that exists to contain important sets of tools other mods rely on to function.",
+	
+	"OverviewTabSource": "mods/s4/main/overview.html",
+	"FilesTabSource": "mods/s4/main/files.html",
+	"RequirementsTabSource": "mods/s4/main/requirements.html",
+	"IssuesTabSource": "mods/s4/main/issues.html",
+	"ChangesTabSource": "mods/s4/main/changes.html",
+	"DevelopmentTabSource": "mods/s4/main/development.html"
+}

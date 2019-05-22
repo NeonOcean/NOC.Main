@@ -1,0 +1,28 @@
+{
+	"FileExtension": "html",
+
+	"Values": {
+		"Title": "NeonOcean - Order",
+		"Description": "",
+		
+		"BasePath": "../../..",
+		
+		"DarkPage": "false",
+		
+		"HeaderExtra": "",
+				
+		"ModNamespace": "NeonOcean.Order"
+	},
+	
+	"Scripts": {
+		"Content": {
+			"Module": "Site_NeonOcean_NOC_Main.Scripts.ModPages",
+			"Function": "GetModPageText",
+			"Inputs": [
+				"ModNamespace"
+			]
+		}
+	},
+
+	"TemplateConfig": "Normal.json"
+}

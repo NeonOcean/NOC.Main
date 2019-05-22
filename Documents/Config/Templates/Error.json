@@ -4,10 +4,13 @@
 
 		"Formatting": {
 			"Title": "Title",
-			"Description": "Description",
 
-			"Base Path": "Base Path",
-
+			"BasePath": "BasePath",
+			
+			"DarkPage": "DarkPage",
+			
+			"HeaderExtra": "HeaderExtra",
+			
 			"Content": "Content"
 		}
 	}

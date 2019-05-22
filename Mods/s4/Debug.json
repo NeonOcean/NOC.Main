@@ -1,0 +1,17 @@
+{
+	"Namespace": "NeonOcean.Debug",
+	"Name": "Debug",
+	"PageURL": "mods/s4/debug",
+	"BannerURL": "mods/s4/debug/banner.png",
+	"PreviewURL": "mods/s4/debug/preview.png",
+	"GameIdentifier": "s4",
+	
+	"Description": "A mod that enables logging systems built into The Sims 4 allowing creators to find and solve issues far easier.",
+	
+	"OverviewTabSource": "mods/s4/debug/overview.html",
+	"FilesTabSource": "mods/s4/debug/files.html",
+	"RequirementsTabSource": "mods/s4/debug/requirements.html",
+	"IssuesTabSource": "mods/s4/debug/issues.html",
+	"ChangesTabSource": "mods/s4/debug/changes.html",
+	"DevelopmentTabSource": "mods/s4/debug/development.html"
+}

@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang = "en">
+	<head>
+		<title>NeonOcean - Main</title>
+		<meta charset="utf-8"/>
+		
+		<meta name = "dark_page" content = "false" />
+		
+		<base href = "../../.." />
+		
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+		
+		<link rel = "stylesheet" type = "text/css" href = "styles/content.css" />
+		<link rel = "stylesheet" type = "text/css" href = "styles/dark.css" />
+		<link rel = "stylesheet" type = "text/css" href = "styles/error.css" />
+		<link rel = "stylesheet" type = "text/css" href = "styles/mod.css" />
+		<link rel = "stylesheet" type = "text/css" href = "styles/mod-list.css" />
+		<link rel = "stylesheet" type = "text/css" href = "styles/special.css" />
+		<link rel = "stylesheet" type = "text/css" href = "styles/universal.css" />
+		
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122165204-5"></script>
+		<script src = "scripts/analytics.js"></script>
+		<script src = "scripts/analytics-events.js"></script>
+		<script src = "scripts/content.js"></script>
+		<script src = "scripts/dark.js"></script>
+		<script src = "scripts/mod.js"></script>
+		
+		
+	</head>
+
+	<body>
+		<div id = "Dark_Page_Dialog" class = "Dark_Dialog_Background" style = "display:none">
+			<div class = "Dark_Dialog_Container">
+				<div class = "Dark_Dialog">
+					<div id = "Dark_Page_Dialog_Text" class = "Dark_Dialog_Text"><!--
+						-->This page contains sexy content, you must be 18 years or older to view it. You can click continue to enable dark mode and view the page, otherwise you should go back to a safe page.<!--
+					--></div>
+					
+					<span id = "Dark_Page_Dialog_Continue_Button" class = "Dark_Dialog_Continue_Button" onclick = "Dark_PageDialogCallback(); AnalyticEvents_DarkPageDialogResponse('Continue');">
+						<div class = "Dark_Dialog_Continue_Button_Text"><!--
+							-->Continue<!--
+						--></div>
+					</span>
+				</div>
+			</div>
+		</div>
+		
+		<div id = "Dark_Enable_Dialog" class = "Dark_Dialog_Background" style = "display:none">
+			<div class = "Dark_Dialog_Container">
+				<div class = "Dark_Dialog">					
+					<div id = "Dark_Enable_Dialog_Text" class = "Dark_Dialog_Text"><!--
+						-->Enabling dark mode will allow you to view sexy content across this site. You must be 18 years or older to use it.<!--
+					--></div>
+					
+					<span class = "Dark_Dialog_Continue_Button" onclick = "Dark_EnableDialogCallback(true); AnalyticEvents_DarkEnableDialogResponse('Continue');">
+						<div class = "Dark_Dialog_Continue_Button_Text"><!--
+							-->Continue<!--
+						--></div>
+					</span>
+					
+					<span class = "Dark_Dialog_Back_Button" onclick = "Dark_EnableDialogCallback(false); AnalyticEvents_DarkEnableDialogResponse('Back');">
+						<div class = "Dark_Dialog_Back_Button_Text"><!--
+							-->Back<!--
+					--></div>
+					</span>
+				</div>
+			</div>
+		</div>
+	
+		<div class = "Document">
+			<div class = "Header_Container">
+				<div class = "Header">
+					<div class = "Header_Row">
+						<span class = "Header_Logo">
+							<a class = "Header_Logo_Link" href = ""><!--
+								-->NeonOcean<!--
+							--></a>
+						</span>
+						
+						<span class = "Header_Dark_Checkbox_Container">
+							<span id = "Header_Dark_Checkbox_Enabled" class = "Header_Dark_Checkbox" style = "display: none" onclick = "Dark_Disable(); AnalyticEvents_ClickedDarkModeToggle('Disabling');">
+								<span class = "Header_Dark_Checkbox_Text"><!--
+									-->Dark mode<br/>
+									<sub>(enabled)</sub><!--
+								--></span>
+								<img class = "Header_Dark_Checkbox_Image" src = "images/dark-checkbox-1.png" />
+							</span>
+							
+							<span id = "Header_Dark_Checkbox_Disabled" class = "Header_Dark_Checkbox" style = "display: none" onclick = "Dark_ShowEnableDialog(); AnalyticEvents_ClickedDarkModeToggle('Enabling');">
+								<span class = "Header_Dark_Checkbox_Text"><!--
+									-->Dark mode<br/>
+									<sub>(disabled)</sub><!--
+								--></span>
+								<img class = "Header_Dark_Checkbox_Image" src = "images/dark-checkbox-0.png" />
+							</span>
+						</span>
+					</div>
+					
+					<div class = "Header_Row">
+						<span class = "Header_Section_Container">
+							<span class = "Header_Section">
+								<a class = "Header_Section_Link" href = ""><!--
+									-->Home<!--
+								--></a>
+							</span>
+							
+							<span class = "Header_Section">
+								<a class = "Header_Section_Link" href = "mods"><!--
+									-->Mods<!--
+								--></a>
+							</span>
+							
+							<span class = "Header_Section">
+								<a class = "Header_Section_Link" href = "about"><!--
+									-->About<!--
+								--></a>
+							</span>
+						</span>
+						
+						<span class = "Header_External_Container">
+							<span id = "Header_External_Twitter" class = "Header_External">
+								<a id = "Header_External_Twitter_Link" class = "Header_External_Link" href = "https://github.com/NeonOcean">
+									<img id = "Header_External_Twitter_Link_Button" class = "Header_External_Link_Button" src = "images/github-button.png"></img>
+								</a>
+							</span>
+							
+							<span id = "Header_External_Twitter" class = "Header_External" style = "display: none">
+								<a id = "Header_External_Twitter_Link" class = "Header_External_Link" href = "https://www.twitter.com/NeonOceanProper">
+									<img id = "Header_External_Twitter_Link_Button" class = "Header_External_Link_Button" src = "images/twitter-button.png"></img>
+								</a>
+							</span>
+						
+							<span id = "Header_External_Patreon" class = "Header_External">
+								<a id = "Header_External_Patreon_Link" class = "Header_External_Link" href = "https://www.patreon.com/NeonOcean">
+									<img id = "Header_External_Patreon_Link_Button" class = "Header_External_Link_Button" src = "images/patron-button.png"></img>
+								</a>
+							</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		
+			<div class = "Content_Container">
+				<div class = "Content"><!--
+					--><div class = "Mod_Container">
+						<div class = "Mod">
+							<div class = "Mod_Header">
+								<img class = "Mod_Header_Banner" src = "mods/s4/main/banner.png" />
+								
+								<span class = "Mod_Header_Name"><!--
+									-->Main<!--
+								--></span>
+								
+								<span class = "Mod_Header_Button_Container">
+									<a id = "Mod_Header_Documentation_Button" class = "Mod_Header_Button" href = "https://doc.mods.neonoceancreations.com/s4/main">
+										<div class = "Mod_Header_Button_Text"><!--
+										-->Documentation<!--
+										--></div>
+									</a>
+									
+									<span id = "Mod_Header_Download_Button" class = "Mod_Header_Button">
+										<div class = "Mod_Header_Button_Text" onclick = "Mod_OpenFilesTab(); document.getElementById('Mod_Files_Tab').scrollIntoView(); AnalyticEvents_Mod_ClickedDownloadButton();"><!--
+										-->Download<!--
+										--></div>
+									</span>
+								</span>
+							</div>
+							
+							<table class = "Mod_Strip">
+								<tbody>
+									<tr>
+										<th id = "Mod_Strip_Version" class = "Mod_Strip_Item"><!--
+											-->Mod version</br><!--
+											--><sub>1.1.0</sub><!--
+										--></th>
+										
+										<th id = "Mod_Strip_Update_Date" class = "Mod_Strip_Item"><!--
+											-->Last updated</br><!--
+											--><sub>March 26, 2019</sub><!--
+										--></th>
+										
+										<th id = "Mod_Strip_Game_Version" class = "Mod_Strip_Item"><!--
+											-->Game Version</br><!--
+											--><sub>1.50.67.1020</sub><!--
+										--></th>
+									</tr>
+								</tbody>
+							</table>
+							
+							<div class = "Mod_Tab_Buttons">
+								<span id = "Mod_Overview_Tab_Button" class = "Mod_Tab_Button" onclick = "Mod_OpenOverviewTab(); AnalyticEvents_Mod_ChangedTab('Overview');"><!--
+									-->Overview<!--
+								--></span>
+								
+								<span id = "Mod_Files_Tab_Button" class = "Mod_Tab_Button" onclick = "Mod_OpenFilesTab(); AnalyticEvents_Mod_ChangedTab('Files');"><!--
+									-->Files<!--
+								--></span>
+								
+								<span id = "Mod_Requirements_Tab_Button" class = "Mod_Tab_Button" onclick = "Mod_OpenRequirementsTab(); AnalyticEvents_Mod_ChangedTab('Requirements');"><!--
+									-->Requirements<!--
+								--></span>
+								
+								<span id = "Mod_Issues_Tab_Button" class = "Mod_Tab_Button" onclick = "Mod_OpenIssuesTab(); AnalyticEvents_Mod_ChangedTab('Issues');"><!--
+									-->Issues<!--
+								--></span>
+								
+								<span id = "Mod_Changes_Tab_Button" class = "Mod_Tab_Button" onclick = "Mod_OpenChangesTab(); AnalyticEvents_Mod_ChangedTab('Changes');"><!--
+									-->Changes<!--
+								--></span>
+								
+								<span id = "Mod_Development_Tab_Button" class = "Mod_Tab_Button" onclick = "Mod_OpenDevelopmentTab(); AnalyticEvents_Mod_ChangedTab('Development');"><!--
+									-->Development<!--
+								--></span>
+							</div>
+							
+							<div class = "Mod_Tabs">
+								<div id = "Mod_Overview_Tab" class = "Mod_Tab"><!--
+									--><p>The mod Main may well be an important toolkit that another mod are thinking about using relies on. If another mod says it requires Main, you must download it or it may not function.</p>
+									<p>Mod creators should check out the documentation for a bit of explanation of the parts of this mod. The source code is also available for use as a reference in the 'files' tab.</p>
+									
+									<div class = "Special_Spacer"></div>
+									
+									<p><b>Note: </b>The features listed below are mostly directed toward creators. If you are not a mod creator, the big feature of Main is that it allows other mods to function.</p>
+									<h1>Features</h1>
+									<ul>
+										<li>Optionally allow Main to control the loading of your mod, which will permit greater control over how it happens.</li>
+										<li>Easy to use system for patching functions.</li>
+										<li>Tools for saving simple persistent data such as settings.</li>
+										<li>Automatically register interactions to game objects through tuning.</li>
+										<li>Allows you to reference localization strings with named identifiers instead of just numbers in certain situations.</li>
+									</ul>
+									
+									<hr/>
+									
+									<h1>Mod Links</h1>
+									<p>
+										Documentation - <a href = "https://doc.mods.neonoceancreations.com/s4/main">https://doc.mods.neonoceancreations.com/s4/main</a><br/>
+										Sources Repository - <a href = "https://github.com/NeonOcean/Main">https://github.com/NeonOcean/Main</a>
+									</p><!--
+								--></div>
+								
+								<div id = "Mod_Files_Tab" class = "Mod_Tab"><!--
+									--><div class = "Mod_Download">
+										<div class = "Mod_Download_Header">
+											<span class = "Mod_Download_Name"><!--
+												-->Installer (Windows Only)<!--
+											--></span>
+											
+											<a class = "Mod_Download_Button" href = "https://dist.mods.neonoceancreations.com/mods/neonocean.main/installer">
+												<div class = "Mod_Header_Download_Button_Text"><!--
+													-->Download<!--
+												--></div>
+											</a>
+										</div>
+										
+										<div class = "Mod_Download_Description"><!--
+											-->An executable to automatically place this mod in The Sims 4 mod folder. You would want to use the installer if you want to expend minimal effort to setup this mod. It can do some nifty stuff like uninstalling any old versions, and automatically enabling mods if you wish. This can currently only run on <b>Windows</b> computers.<!--
+										--></div>
+									</div>
+									
+									<div class = "Mod_Download">
+										<div class = "Mod_Download_Header">
+											<span class = "Mod_Download_Name"><!--
+												-->Files (Manual Installation)<!--
+											--></span>
+											
+											<a class = "Mod_Download_Button" href = "https://dist.mods.neonoceancreations.com/mods/neonocean.main/files">
+												<div class = "Mod_Download_Button_Text"><!--
+													-->Download<!--
+												--></div>
+											</a>
+										</div>
+										
+										<div class = "Mod_Download_Description"><!--
+											-->The mod files contained in a zip folder. Download this if you would like to install the mod manually or you can't use the installer. If you need assistance installing this mod, a guide can be found in the mod's <a href = "https://doc.mods.neonoceancreations.com/s4/main/installation">documentation.</a><!--
+										--></div>
+									</div>
+									
+									<div class = "Mod_Download">
+										<div class = "Mod_Download_Header">
+											<span class = "Mod_Download_Name"><!--
+												-->Sources<!--
+											--></span>
+											
+											<a class = "Mod_Download_Button" href = "https://dist.mods.neonoceancreations.com/mods/neonocean.main/sources">
+												<div class = "Mod_Header_Download_Button_Text"><!--
+													-->Download<!--
+												--></div>
+											</a>
+										</div>
+										
+										<div class = "Mod_Download_Description"><!--
+											-->The source code and other raw files used to make this mod. You should only download this if you know what you are doing.<!--
+										--></div>
+									</div>
+									
+									<div><!--
+										-->If you would like to download outdated versions of this mod you can do so here:<br/><!--
+									--><a href = "https://dist.mods.neonoceancreations.com/mods/neonocean.main">Previous versions</a><!--
+									--></div><!--
+								--></div>
+								
+								<div id = "Mod_Requirements_Tab" class = "Mod_Tab"><!--
+									--><p>This mod has no requirements.</p><!--
+								--></div>
+								
+								<div id = "Mod_Issues_Tab" class = "Mod_Tab"><!--
+									--><p>This mod has no known bugs or incompatibilities.</p>
+									
+									<hr/>
+									
+									<h1>Reporting Issues</h1>
+									<p>If you are experiencing unexpected problems with this mod you can report your troubles via this mod's Github page. Be sure to check this mod's documentation to learn the proper procedure for reporting bugs.</p>
+									<a href = "https://github.com/NeonOcean/Main/Issues">https://github.com/NeonOcean/Main/issues</a><br/>
+									<a href = "https://doc.mods.neonoceancreations.com/s4/main/reporting-bugs">Bug reporting guide</a><!--
+								--></div>
+								
+								<div id = "Mod_Changes_Tab" class = "Mod_Tab"><!--
+									--><h1>Change Log</h1>
+									<br/>
+									<h2>v1.1.0 (March 26, 2019)</h2>
+									<p>During the development of this version I realized that it might be a good idea to open this mod up from being a toolkit for just my mods, to being a toolkit for potentially many mods. Some of the largest changes made reflect this.</p>
+									<ul>
+									<li>The names and paths of mods supposed to be loaded by Main are no longer hard coded, it will instead look through the mod folder for supporting mods.</li>
+									<li>Mod information is now stored in a single JSON file, These files are also required for Main to detect or load the mod.</li>
+									<li>A new system for handling settings is now in place.   </li>
+									<li>Added tools for interactions, for example, interactions using Main can specify which objects they would like to be available on through tuning.</li>
+									<li>New tools for in-game settings dialogs now allow a mod's settings to be changed far more easily.</li>
+									<li>In-game notifications will now appear telling you when an update is available or to display promotions from NeonOcean.</li>
+									<li>Interactions now exist that can direct you to web pages relevant to this mod, such as the documentation.</li>
+									<li>Addition and removal of this mod are can now be facilitated through an installer or uninstaller. These currently are only usable on windows computers.</li>
+									</ul>
+									<h2>v1.0.0 (July 26, 2018)</h2>
+									<ul>
+									<li>Initial release</li>
+									</ul><!--
+								--></div>
+								
+								<div id = "Mod_Development_Tab" class = "Mod_Tab"><!--
+									--><h1>Plans</h1>
+									
+									<h3>Mod Data Saving System (Status: Planned)</h3>
+									<ul>
+									<li>Allows for the saving of mod related data that can't be included in The Sims 4 saves.</li>
+									<li>Save files will probably be loaded by one relatively simple module then handed off to category specific modules for managing.</li>
+									<li>The category modules for saving will likely handle data specific to the world, sims, or lots.</li>
+									<li>Data will also be separated based on what mod asked for it to be saved, so as not to inadvertently interfere with other mods.</li>
+									</ul>
+									<h3>Sim Configuration System (Status: Planned)</h3>
+									<ul>
+									<li>Will be very similar the system already in place for mod configuration except it will each sim will have their own setup.</li>
+									</ul>
+									<h3>Object finder for interactions (Status: Idea)</h3>
+									<ul>
+									<li>Find all objects of a type specified by the interaction's tuning and add the interaction to it.</li>
+									</ul><!--
+								--></div>
+							</div>
+						</div>
+					</div><!--
+				--></div>
+			</div>
+			
+			<div class = "Footer" />
+		</div>
+	</body>
+</html>

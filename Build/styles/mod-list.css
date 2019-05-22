@@ -1,0 +1,103 @@
+ul.Mod_List {
+	margin: initial;
+	padding: initial;
+
+	display: table;
+	
+	list-style-type: none;
+}
+
+.Mod_List_Header {
+	padding-left: 25px;
+}
+
+li.Mod_List_Entry_Container {
+	width: 650px;
+	height: 400px;
+	
+	margin: 25px;
+	padding: 23px;
+	
+	border-style: solid;
+	border-color: lightgray;
+	border-width: 2px;
+	
+	border-radius: 10px;
+	
+	vertical-align: top;
+	
+	display: inline-block;
+	
+	background-color: white;
+	
+	cursor: pointer;
+}
+
+li.Mod_List_Entry_Container:hover {
+	background-color: aliceblue;
+}
+
+a.Mod_List_Entry_Link {
+	width: 650px;
+	height: 400px;
+	
+	margin-top: -25px;
+	margin-left: -25px;
+	
+	position: absolute;
+	
+	z-index: 10;
+}
+
+div.Mod_List_Entry {
+	width: 600px;
+	height: 350px;
+	
+	position: relative;
+}
+
+img.Mod_List_Entry_Preview {
+	width: 600px;
+	height: 200px;
+}
+
+div.Mod_List_Entry_Name {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+div.Mod_List_Entry_Description {
+	max-height: 75px;
+	
+	overflow-y: hidden;
+}
+
+span.Mod_List_Entry_Version, span.Mod_List_Entry_Update_Date {
+	width: 100%;
+	
+	bottom: 0px;
+	
+	position: absolute;
+}
+
+span.Mod_List_Entry_Version {
+	left: 0px;
+	
+	text-align: left;
+}
+
+span.Mod_List_Entry_Update_Date {
+	right: 0px;
+	
+	text-align: right;
+}
+
+
+
+
+
+
+
+
+
+

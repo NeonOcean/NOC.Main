@@ -1,0 +1,17 @@
+{
+	"Namespace": "NeonOcean.Order",
+	"Name": "Order",
+	"PageURL": "mods/s4/order",
+	"BannerURL": "mods/s4/order/banner.png",
+	"PreviewURL": "mods/s4/order/preview.png",
+	"GameIdentifier": "s4",
+	
+	"Description": "A mod that allows for better control over the order in which mods are loaded.",
+	
+	"OverviewTabSource": "mods/s4/order/overview.html",
+	"FilesTabSource": "mods/s4/order/files.html",
+	"RequirementsTabSource": "mods/s4/order/requirements.html",
+	"IssuesTabSource": "mods/s4/order/issues.html",
+	"ChangesTabSource": "mods/s4/order/changes.html",
+	"DevelopmentTabSource": "mods/s4/order/development.html"
+}

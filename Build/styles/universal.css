@@ -1,7 +1,14 @@
+*, *::before , *::after {
+	box-sizing: border-box;
+}
+
 html, body {
 	width: 100%;
 	height: 100%;
 	margin: 0px;
+	
+	background-color: mistyrose;
+	font-family: Arial, sans-serif;
 }
 
 a {
@@ -12,31 +19,161 @@ a:hover {
 	color: black;
 }
 
+div.Dialogs {
+	width: inherit;
+	height: inherit;
+	
+	position: fixed;
+	
+	z-index: 100;
+}
+
 div.Document {
 	width: inherit;
 	height: inherit;
 }
 
-div.Content_Container {
+div.Header_Container {
+	width: inherit;
+	height: 100px;
+	
+	z-index: 50;
+}
+
+div.Header {
 	width: inherit;
 	height: inherit;
 	
-	min-width: 1000px;
-	min-height: 800px;
+	position: absolute;
+	
+	min-width: 1450px;
+	
+	background-color: white;
+}
+
+div.Header_Row {
+	height: 50px;
+	line-height: 50px;
+}
+
+span.Header_Logo, span.Header_Dark_Checkbox_Container, span.Header_Section_Container, span.Header_External_Container {
+	height: 32px;
+	line-height: 32px;
+	margin: 9px 9px 9px 9px;
+}
+
+span.Header_External_Container, span.Header_Dark_Checkbox_Container {	
+	float: right;
+	text-align: right;
+}
+
+span.Header_Logo, span.Header_Dark_Checkbox_Container {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+span.Header_Logo {
+	display: inline-block;
+	
+	font-size: 32px;
+	font-weight: bold;
+}
+
+a.Header_Logo_Link {
+	display: block;
+	
+	color: black;
+	text-decoration: none;
+	
+	font-family: sans-serif;
+}
+
+span.Header_Dark_Checkbox {
+	cursor: pointer;
+}
+
+span.Header_Dark_Checkbox_Text {
+	display: inline-block;
+	line-height: 10px;
+	text-align: center;
+}
+
+img.Header_Dark_Checkbox_Image {
+	vertical-align: bottom;
+}
+
+span.Header_Section_Container {
+	height: 32px;
+	
+	border-collapse: collapse;
+}
+
+span.Header_Section {
+	width: 150px;
+	height: inherit;
+	
+	display: table-cell;
+	
+	border-right-style: solid;
+	border-right-color: gainsboro;
+	border-right-width: 1px;
+	
+	border-left-style: solid;
+	border-left-color: gainsboro;
+	border-left-width: 1px;
+	
+	box-sizing: border-box;
+	
+	text-align: center;
+}
+
+span.Header_Section_Container :first-child {
+	border-left-style: none;
+}
+
+span.Header_Section_Container :last-child {
+	border-right-style: none;
+}
+
+a.Header_Section_Link {
+	width: inherit;
+	height: inherit;
+	
+	display: block;
+	
+	font-size: 18px;
+	
+	text-decoration: none;
+}
+
+span.Header_External, a.Header_External_Link {
+	height: inherit;
+	
+	display: inline-block;
+}
+
+div.Content_Container {
+	width: 100%;
+	text-align: center;
 }
 
 div.Content {
-	width: inherit;
-	height: inherit;
+	width: 1450px;
 	
-	box-sizing: border-box;
+	margin-top: 100px;
+	padding: 25px;
+	
+	display: inline-block;
+	
+	background-color: white;
+	border-radius: 5px;
+	
+	text-align: initial;
 }
 
-div.Content_Offset {
-	width: inherit;
-	height: inherit;
-	
-	padding: 0px 50px 0px 0px;
-	box-sizing: border-box;
+div.Footer {
+	height: 100px;
 }
 

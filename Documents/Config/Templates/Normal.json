@@ -1,0 +1,17 @@
+{
+	"Document": {
+		"Template": "Universal.html",
+
+		"Formatting": {
+			"Title": "Title",
+
+			"BasePath": "BasePath",
+			
+			"DarkPage": "DarkPage",
+			
+			"HeaderExtra": "HeaderExtra",
+
+			"Content": "Content"
+		}
+	}
+}

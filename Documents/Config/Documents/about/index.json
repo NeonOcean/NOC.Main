@@ -1,0 +1,19 @@
+{
+	"FileExtension": "html",
+
+	"Values": {
+		"Title": "NeonOcean",
+		
+		"BasePath": "..",
+		
+		"DarkPage": "false",
+		
+		"HeaderExtra": ""
+	},
+
+	"Sources": {
+		"Content": "about/index.html"
+	},
+
+	"TemplateConfig": "Normal.json"
+}

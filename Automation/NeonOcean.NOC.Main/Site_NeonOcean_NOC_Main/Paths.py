@@ -13,6 +13,8 @@ DocumentsConfigTemplatesPath = os.path.join(DocumentsConfigPath, "Templates")  #
 DocumentsSourcesPath = os.path.join(DocumentsPath, "Sources")  # type: str
 DocumentsSourcesIncludedPath = os.path.join(DocumentsPath, "Sources Included")  # type: str
 
+ModsPath = os.path.join(RootPath, "Mods")  # type: str
+
 TemplatesPath = os.path.join(RootPath, "Templates")  # type: str
 
 LoosePath = os.path.join(RootPath, "Loose")  # type: str

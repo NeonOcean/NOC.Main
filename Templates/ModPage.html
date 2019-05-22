@@ -1,0 +1,98 @@
+<div class = "Mod_Container">
+	<div class = "Mod">
+		<div class = "Mod_Header">
+			<img class = "Mod_Header_Banner" src = "{<-BannerURL->}" />
+			
+			<span class = "Mod_Header_Name"><!--
+				-->{<-Name->}<!--
+			--></span>
+			
+			<span class = "Mod_Header_Button_Container">
+				<a id = "Mod_Header_Documentation_Button" class = "Mod_Header_Button" href = "{<-DocumentationURL->}">
+					<div class = "Mod_Header_Button_Text"><!--
+					-->Documentation<!--
+					--></div>
+				</a>
+				
+				<span id = "Mod_Header_Download_Button" class = "Mod_Header_Button">
+					<div class = "Mod_Header_Button_Text" onclick = "Mod_OpenFilesTab(); document.getElementById('Mod_Files_Tab').scrollIntoView(); AnalyticEvents_Mod_ClickedDownloadButton();"><!--
+					-->Download<!--
+					--></div>
+				</span>
+			</span>
+		</div>
+		
+		<table class = "Mod_Strip">
+			<tbody>
+				<tr>
+					<th id = "Mod_Strip_Version" class = "Mod_Strip_Item"><!--
+						-->Mod version</br><!--
+						--><sub>{<-Version->}</sub><!--
+					--></th>
+					
+					<th id = "Mod_Strip_Update_Date" class = "Mod_Strip_Item"><!--
+						-->Last updated</br><!--
+						--><sub>{<-UpdateDate->}</sub><!--
+					--></th>
+					
+					<th id = "Mod_Strip_Game_Version" class = "Mod_Strip_Item"><!--
+						-->Game Version</br><!--
+						--><sub>{<-GameVersion->}</sub><!--
+					--></th>
+				</tr>
+			</tbody>
+		</table>
+		
+		<div class = "Mod_Tab_Buttons">
+			<span id = "Mod_Overview_Tab_Button" class = "Mod_Tab_Button" onclick = "Mod_OpenOverviewTab(); AnalyticEvents_Mod_ChangedTab('Overview');"><!--
+				-->Overview<!--
+			--></span>
+			
+			<span id = "Mod_Files_Tab_Button" class = "Mod_Tab_Button" onclick = "Mod_OpenFilesTab(); AnalyticEvents_Mod_ChangedTab('Files');"><!--
+				-->Files<!--
+			--></span>
+			
+			<span id = "Mod_Requirements_Tab_Button" class = "Mod_Tab_Button" onclick = "Mod_OpenRequirementsTab(); AnalyticEvents_Mod_ChangedTab('Requirements');"><!--
+				-->Requirements<!--
+			--></span>
+			
+			<span id = "Mod_Issues_Tab_Button" class = "Mod_Tab_Button" onclick = "Mod_OpenIssuesTab(); AnalyticEvents_Mod_ChangedTab('Issues');"><!--
+				-->Issues<!--
+			--></span>
+			
+			<span id = "Mod_Changes_Tab_Button" class = "Mod_Tab_Button" onclick = "Mod_OpenChangesTab(); AnalyticEvents_Mod_ChangedTab('Changes');"><!--
+				-->Changes<!--
+			--></span>
+			
+			<span id = "Mod_Development_Tab_Button" class = "Mod_Tab_Button" onclick = "Mod_OpenDevelopmentTab(); AnalyticEvents_Mod_ChangedTab('Development');"><!--
+				-->Development<!--
+			--></span>
+		</div>
+		
+		<div class = "Mod_Tabs">
+			<div id = "Mod_Overview_Tab" class = "Mod_Tab"><!--
+				-->{<-OverviewTab->}<!--
+			--></div>
+			
+			<div id = "Mod_Files_Tab" class = "Mod_Tab"><!--
+				-->{<-FilesTab->}<!--
+			--></div>
+			
+			<div id = "Mod_Requirements_Tab" class = "Mod_Tab"><!--
+				-->{<-RequirementsTab->}<!--
+			--></div>
+			
+			<div id = "Mod_Issues_Tab" class = "Mod_Tab"><!--
+				-->{<-IssuesTab->}<!--
+			--></div>
+			
+			<div id = "Mod_Changes_Tab" class = "Mod_Tab"><!--
+				-->{<-ChangesTab->}<!--
+			--></div>
+			
+			<div id = "Mod_Development_Tab" class = "Mod_Tab"><!--
+				-->{<-DevelopmentTab->}<!--
+			--></div>
+		</div>
+	</div>
+</div>

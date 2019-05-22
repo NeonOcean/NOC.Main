@@ -1,16 +1,20 @@
 {
-	"File Extension": "html",
+	"FileExtension": "html",
 
 	"Values": {
 		"Title": "404 page not found",
 		"Description": "",
 		
-		"Base Path": "https://www.neonoceancreations.com"
+		"BasePath": "https://www.neonoceancreations.com",
+		
+		"DarkPage": "false",
+		
+		"HeaderExtra": "<meta name=\"robots\" content=\"noindex\">"
 	},
 
 	"Sources": {
 		"Content": "404.html"
 	},
 
-	"Template Config": "Error.json"
+	"TemplateConfig": "Error.json"
 }
