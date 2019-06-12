@@ -6,9 +6,9 @@
 		
 		<meta name = "dark_page" content = "false" />
 		
-		<base href = "../../.." />
+		<base href = "../../../" />
 		
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.png"/>
 		
 		<link rel = "stylesheet" type = "text/css" href = "styles/content.css" />
 		<link rel = "stylesheet" type = "text/css" href = "styles/dark.css" />
@@ -171,17 +171,17 @@
 									<tr>
 										<th id = "Mod_Strip_Version" class = "Mod_Strip_Item"><!--
 											-->Mod version</br><!--
-											--><sub>1.1.0</sub><!--
+											--><sub>1.2.0</sub><!--
 										--></th>
 										
 										<th id = "Mod_Strip_Update_Date" class = "Mod_Strip_Item"><!--
 											-->Last updated</br><!--
-											--><sub>March 26, 2019</sub><!--
+											--><sub>June 12, 2019</sub><!--
 										--></th>
 										
 										<th id = "Mod_Strip_Game_Version" class = "Mod_Strip_Item"><!--
 											-->Game Version</br><!--
-											--><sub>1.50.67.1020</sub><!--
+											--><sub>1.51.77.1020</sub><!--
 										--></th>
 									</tr>
 								</tbody>
@@ -215,19 +215,22 @@
 							
 							<div class = "Mod_Tabs">
 								<div id = "Mod_Overview_Tab" class = "Mod_Tab"><!--
-									--><p>The mod Main may well be an important toolkit that another mod are thinking about using relies on. If another mod says it requires Main, you must download it or it may not function.</p>
-									<p>Mod creators should check out the documentation for a bit of explanation of the parts of this mod. The source code is also available for use as a reference in the 'files' tab.</p>
+									--><p>Main is a mod that contains a set of tools that other mods may well rely on to function. Previously this tool set was only available for use by NeonOcean, but at this point, it is now open to everyone. Main would potentially reduce the amount of work that is necessary to make complex mods, as they would no longer need to create their own systems for things like saving data.</p>
+									
+									<p>If you are a mod creator, you should check out the documentation for a bit of explanation of the parts of this mod. The source code is also available for use as a reference in the files tab.</p>
 									
 									<div class = "Special_Spacer"></div>
 									
-									<p><b>Note: </b>The features listed below are mostly directed toward creators. If you are not a mod creator, the big feature of Main is that it allows other mods to function.</p>
+									<p><b>Note: </b>The features listed below are mostly directed toward creators. If you are not a mod creator, the biggest feature of Main is that it allows other mods to function.</p>
 									<h1>Features</h1>
 									<ul>
 										<li>Optionally allow Main to control the loading of your mod, which will permit greater control over how it happens.</li>
 										<li>Easy to use system for patching functions.</li>
 										<li>Tools for saving simple persistent data such as settings.</li>
+										<li>Pre-made framework for handling settings and displaying dialogs to change the setting in-game.</li>
 										<li>Automatically register interactions to game objects through tuning.</li>
 										<li>Allows you to reference localization strings with named identifiers instead of just numbers in certain situations.</li>
+										<li>Ability to notify players of mod updates through in-game notifications, with settings included in Main that allow the users to disable this.</li>
 									</ul>
 									
 									<hr/>
@@ -318,6 +321,41 @@
 								<div id = "Mod_Changes_Tab" class = "Mod_Tab"><!--
 									--><h1>Change Log</h1>
 									<br/>
+									<h2>v1.2.0 (June 12, 2019)</h2>
+									<h3>New Features</h3>
+									<ul>
+									<li>The distribution system is now available as a tool instead being only usable by this mod.</li>
+									<li>Completely reworked setting dialogs system to be far more versatile.</li>
+									<li>Changed settings related to the distribution system to allow users to disable update checking for individual mods.</li>
+									</ul>
+									<h3>Changes</h3>
+									<ul>
+									<li>The debug system now logs exceptions automatically without their required input.</li>
+									<li>Added an icon to the root NeonOcean pie menu category.</li>
+									<li>Changed this mod's license to CC BY, this change was mostly intended to make the parts of this mod available for reuse in other creator's projects.</li>
+									<li>
+									<h4>Mod Information Files</h4>
+									<ul>
+									<li>Mod information files can now be prefixed with "NeonOcean-Mod" instead of having a forced, uniform name.</li>
+									<li>Multiple word keys in the mod file no longer use spaces between the words.</li>
+									<li>The "LoadController" value is now optional, not including it is a much better way of telling Main you don't want it to load the mod, opposed to the old option of leaving it blank.</li>
+									<li>"Distribution" is optional as well, not including it signal distributions systems to not check for the mod's updates, it will also not appear in Main's settings meant to enable or disable the update checking.</li>
+									<li>The "LowestVersion" and "HighestVersion" values in mod compatibility data are also, now optional.</li>
+									</ul>
+									</li>
+									</ul>
+									<h3>Fixed Bugs</h3>
+									<ul>
+									<li>Mods are now correctly loaded without the mod Order by NeonOcean being installed.</li>
+									<li>Fixed problem where NeonOcean update notifications sent users to the mod's documentation page instead the mod page.</li>
+									<li>The notification showing that some mods have compatibility problems now correctly lists the mods in question.</li>
+									<li>Invalid setting input notifications now correctly display mod name and input information.</li>
+									<li>The timer tool no longer erroneously warns of oversleep when changing from a high interval to a low interval while the timer is running. </li>
+									<li>Debug session files now display certain information correctly.</li>
+									<li>Fixed potential bugs in the debug system related to threads.</li>
+									<li>Debug write failure notifications now correctly display the error information.</li>
+									</ul>
+									<hr>
 									<h2>v1.1.0 (March 26, 2019)</h2>
 									<p>During the development of this version I realized that it might be a good idea to open this mod up from being a toolkit for just my mods, to being a toolkit for potentially many mods. Some of the largest changes made reflect this.</p>
 									<ul>
@@ -330,6 +368,7 @@
 									<li>Interactions now exist that can direct you to web pages relevant to this mod, such as the documentation.</li>
 									<li>Addition and removal of this mod are can now be facilitated through an installer or uninstaller. These currently are only usable on windows computers.</li>
 									</ul>
+									<hr>
 									<h2>v1.0.0 (July 26, 2018)</h2>
 									<ul>
 									<li>Initial release</li>
@@ -350,9 +389,11 @@
 									<ul>
 									<li>Will be very similar the system already in place for mod configuration except it will each sim will have their own setup.</li>
 									</ul>
-									<h3>Object finder for interactions (Status: Idea)</h3>
+									<h3>Object finder For Interactions (Status: Idea)</h3>
 									<ul>
 									<li>Find all objects of a type specified by the interaction's tuning and add the interaction to it.</li>
+									<li>Examples of object types you could set the interaction to would be all beds or all computers and more.</li>
+									<li>This system could potentially allow for the support of new content with out updating mods, and support for custom content automatically.</li>
 									</ul><!--
 								--></div>
 							</div>

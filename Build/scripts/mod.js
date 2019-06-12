@@ -20,13 +20,31 @@ Mod_TabNames = [
 Mod_DefaultTab = "Overview";
 
 function Mod_OnPageLoad () {
-	defaultTabIdentifier = Mod_TabIdentifierPrefix + Mod_DefaultTab + Mod_TabIdentifierSuffix;
+	startTabName = null;
+	startTabTarget = location.hash.toLowerCase();
 	
-	if(document.getElementById(defaultTabIdentifier) == null) {
+	if(startTabTarget.length != 0) {
+		for(var tabNameIndex = 0; tabNameIndex < Mod_TabNames.length; tabNameIndex++) {		
+			if("#" + Mod_TabNames[tabNameIndex].toLowerCase() == startTabTarget) {
+				startTabName = Mod_TabNames[tabNameIndex];
+				break;
+			}
+		}
+	}
+	
+	if(startTabName == null) {
+		startTabName = Mod_DefaultTab;
+	} else {
+		if(document.getElementById(Mod_TabIdentifierPrefix + startTabName + Mod_TabIdentifierSuffix) == null) {
+			startTabName = Mod_DefaultTab;
+		}
+	}
+	
+	if(document.getElementById(Mod_TabIdentifierPrefix + startTabName + Mod_TabIdentifierSuffix) == null) {
 		return
 	}
 	
-	Mod_OpenOverviewTab();
+	Mod_OpenTab(startTabName, false);
 }
 
 function Mod_EnabledTab (tabName) {
@@ -63,7 +81,7 @@ function Mod_DisableTab (tabName) {
 	}
 }
 
-function Mod_OpenTab (targetTabName) {
+function Mod_OpenTab (targetTabName, changeHash) {
 	Mod_EnabledTab(targetTabName);
 	
 	for(var tabNameIndex = 0; tabNameIndex < Mod_TabNames.length; tabNameIndex++) {		
@@ -73,34 +91,38 @@ function Mod_OpenTab (targetTabName) {
 		
 		Mod_DisableTab(Mod_TabNames[tabNameIndex]);
 	}
+	
+	if(changeHash) {
+		location.hash = "#" + targetTabName.toLowerCase();
+	}
 }
 
 function Mod_OpenOverviewTab () {
-	Mod_OpenTab("Overview");
+	Mod_OpenTab("Overview", true);
 }
 
 function Mod_OpenGalleryTab () {
-	Mod_OpenTab("Gallery");
+	Mod_OpenTab("Gallery", true);
 }
 
 function Mod_OpenFilesTab () {
-	Mod_OpenTab("Files");
+	Mod_OpenTab("Files", true);
 }
 
 function Mod_OpenRequirementsTab () {
-	Mod_OpenTab("Requirements");
+	Mod_OpenTab("Requirements", true);
 }
 
 function Mod_OpenIssuesTab () {
-	Mod_OpenTab("Issues");
+	Mod_OpenTab("Issues", true);
 }
 
 function Mod_OpenChangesTab () {
-	Mod_OpenTab("Changes");
+	Mod_OpenTab("Changes", true);
 }
 
 function Mod_OpenDevelopmentTab () {
-	Mod_OpenTab("Development");
+	Mod_OpenTab("Development", true);
 }
 
 window.addEventListener("load", Mod_OnPageLoad);

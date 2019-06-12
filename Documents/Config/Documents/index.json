@@ -3,10 +3,7 @@
 
 	"Values": {
 		"Title": "NeonOcean",
-		"Description": "",
-		
-		"BasePath": "",
-		
+
 		"DarkPage": "false",
 		
 		"HeaderExtra": ""
