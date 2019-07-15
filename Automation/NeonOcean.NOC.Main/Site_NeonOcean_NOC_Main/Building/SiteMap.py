@@ -22,11 +22,14 @@ def BuildSiteMap () -> bool:
 		else:
 			directoryRelativePath = str(pathlib.Path(directoryRoot).relative_to(Paths.BuildPath))
 
+		directoryRelativePath = directoryRelativePath.replace("\\", "/")
+
 		for fileName in fileNames:  # type: str
 			fileExtension = os.path.splitext(fileName)[1].lower()  # type: str
 
 			if fileExtension == ".html" or fileExtension == ".htm":
 				filePath = os.path.join(directoryRelativePath, fileName)  # type: str
+				filePath = filePath.replace("\\", "/")
 
 				if filePath in Site.GetCurrentSite().SitemapExcluded:
 					continue

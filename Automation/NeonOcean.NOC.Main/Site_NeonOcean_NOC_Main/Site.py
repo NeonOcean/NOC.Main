@@ -15,6 +15,13 @@ class Site:
 		self.GithubName = informationDictionary["Github Name"]  # type: str
 		self.SitemapExcluded = informationDictionary["Sitemap Excluded"]  # type: typing.List[str]
 
+		siteMapExcludedIndex = 0  # type: int
+
+		while siteMapExcludedIndex < len(self.SitemapExcluded):
+			self.SitemapExcluded[siteMapExcludedIndex] = self.SitemapExcluded[siteMapExcludedIndex].replace("\\", "/")
+
+			siteMapExcludedIndex += 1
+
 def GetCurrentSite () -> Site:
 	return _site
 

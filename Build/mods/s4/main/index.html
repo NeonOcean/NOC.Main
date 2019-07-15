@@ -171,17 +171,17 @@
 									<tr>
 										<th id = "Mod_Strip_Version" class = "Mod_Strip_Item"><!--
 											-->Mod version</br><!--
-											--><sub>1.2.0</sub><!--
+											--><sub>1.3.0</sub><!--
 										--></th>
 										
 										<th id = "Mod_Strip_Update_Date" class = "Mod_Strip_Item"><!--
 											-->Last updated</br><!--
-											--><sub>June 12, 2019</sub><!--
+											--><sub>July 15, 2019</sub><!--
 										--></th>
 										
 										<th id = "Mod_Strip_Game_Version" class = "Mod_Strip_Item"><!--
 											-->Game Version</br><!--
-											--><sub>1.51.77.1020</sub><!--
+											--><sub>1.52.100.1020</sub><!--
 										--></th>
 									</tr>
 								</tbody>
@@ -225,10 +225,11 @@
 									<h1>Features</h1>
 									<ul>
 										<li>Optionally allow Main to control the loading of your mod, which will permit greater control over how it happens.</li>
+										<li>Adds the ability to write custom save game data.</li>
 										<li>Easy to use system for patching functions.</li>
 										<li>Tools for saving simple persistent data such as settings.</li>
 										<li>Pre-made framework for handling settings and displaying dialogs to change the setting in-game.</li>
-										<li>Automatically register interactions to game objects through tuning.</li>
+										<li>Ability to automatically register interactions to game objects through tuning.</li>
 										<li>Allows you to reference localization strings with named identifiers instead of just numbers in certain situations.</li>
 										<li>Ability to notify players of mod updates through in-game notifications, with settings included in Main that allow the users to disable this.</li>
 									</ul>
@@ -321,6 +322,37 @@
 								<div id = "Mod_Changes_Tab" class = "Mod_Tab"><!--
 									--><h1>Change Log</h1>
 									<br/>
+									<h2>v1.3.0 (July 15, 2019)</h2>
+									<h3>New Features</h3>
+									<ul>
+									<li>New systems now allow for the saving of data that is tied to a Sims 4 save file.</li>
+									<li>The director's announcer now has a bunch more announcement capabilities.  </li>
+									<li>It is now possible to patch a function directly, meaning can you input the original and target callables and receive the patch as the output.</li>
+									<li>The interaction object registration system now supports the ability to determine what each object is and should run much faster.</li>
+									<li>Mod information files now allow for specification of version display strings. These are only used for display, this will not allow for an internal version number outside the standard Major.Minor.Patch.Build format.</li>
+									<li>The distribution system now also supports version display strings, these will be shown on mod update notifications as the next version number if the value exists.</li>
+									</ul>
+									<h3>Changes</h3>
+									<ul>
+									<li>All of Main's interactions will now only show up when clicking on Sims instead of everything.</li>
+									<li>Changed the way persistent files are formatted, this will likely cause settings to reset.</li>
+									<li>The persistent class changed to become more extendable, you will also now need to specify the class as "PersistentFile" instead of just "Persistent" to save data to a file.</li>
+									<li>Made distribution system's version and promotion file reading is more forgiving; if sections of the files cannot be read they will be ignored instead.</li>
+									<li>Setting dialogs now take setting wrapper objects instead of the setting directly.</li>
+									<li>
+									<h4>Mod Information Files</h4>
+									<ul>
+									<li>The values "Rating", "ScriptPaths", "Requirements" and "Compatibility" in the mod file's root are no longer required to exist.</li>
+									<li>'ScriptPaths' values can now be dictionaries along with strings. Using a dictionary will allow you to specify the root of the script path. Check the documentation for details, if the page exists yet.</li>
+									</ul>
+									</li>
+									</ul>
+									<h3>Fixed bugs</h3>
+									<ul>
+									<li>Patching now correctly preserves the original callable's parameters. Previously, in certain cases such as using the "getfullargspec" function in the inspect module, it would incorrectly show the wrapper's parameters instead of the original's.</li>
+									<li>Modules named __init__ are no longer imported twice.</li>
+									</ul>
+									<hr>
 									<h2>v1.2.0 (June 12, 2019)</h2>
 									<h3>New Features</h3>
 									<ul>
@@ -378,18 +410,7 @@
 								<div id = "Mod_Development_Tab" class = "Mod_Tab"><!--
 									--><h1>Plans</h1>
 									
-									<h3>Mod Data Saving System (Status: Planned)</h3>
-									<ul>
-									<li>Allows for the saving of mod related data that can't be included in The Sims 4 saves.</li>
-									<li>Save files will probably be loaded by one relatively simple module then handed off to category specific modules for managing.</li>
-									<li>The category modules for saving will likely handle data specific to the world, sims, or lots.</li>
-									<li>Data will also be separated based on what mod asked for it to be saved, so as not to inadvertently interfere with other mods.</li>
-									</ul>
-									<h3>Sim Configuration System (Status: Planned)</h3>
-									<ul>
-									<li>Will be very similar the system already in place for mod configuration except it will each sim will have their own setup.</li>
-									</ul>
-									<h3>Object finder For Interactions (Status: Idea)</h3>
+									<h3>Object finder For Interactions (Status: Framework Implemented)</h3>
 									<ul>
 									<li>Find all objects of a type specified by the interaction's tuning and add the interaction to it.</li>
 									<li>Examples of object types you could set the interaction to would be all beds or all computers and more.</li>
