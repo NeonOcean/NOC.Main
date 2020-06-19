@@ -1,5 +1,5 @@
 {
-	"Namespace": "NeonOcean.Order",
+	"Namespace": "NeonOcean.S4.Order",
 	"Name": "Order",
 	"PageURL": "mods/s4/order",
 	"BannerURL": "mods/s4/order/banner.png",

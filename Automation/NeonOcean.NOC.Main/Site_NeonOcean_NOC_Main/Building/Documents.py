@@ -32,7 +32,7 @@ def _BuildDocuments () -> None:
 				if not os.path.exists(documentDirectoryPath):
 					os.makedirs(documentDirectoryPath)
 
-				with open(documentFilePath, "w+") as documentFile:
+				with open(documentFilePath, "w+", encoding = "utf-8") as documentFile:
 					documentFile.write(documentText)
 
 def _ReadDocumentConfig (documentConfigFilePath: str) -> typing.Tuple[str, str]:

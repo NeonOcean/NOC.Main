@@ -1,0 +1,17 @@
+{
+	"Namespace": "NeonOcean.S4.Cycle",
+	"Name": "Cycle",
+	"PageURL": "mods/s4/cycle",
+	"BannerURL": "mods/s4/cycle/banner.png",
+	"PreviewURL": "mods/s4/cycle/preview.png",
+	"GameIdentifier": "s4",
+	
+	"Description": "Adds menstruation and woohoo risk as problems your sims must deal with.",
+	
+	"OverviewTabSource": "mods/s4/cycle/overview.html",
+	"FilesTabSource": "mods/s4/cycle/files.html",
+	"RequirementsTabSource": "mods/s4/cycle/requirements.html",
+	"IssuesTabSource": "mods/s4/cycle/issues.html",
+	"ChangesTabSource": "mods/s4/cycle/changes.html",
+	"DevelopmentTabSource": "mods/s4/cycle/development.html"
+}

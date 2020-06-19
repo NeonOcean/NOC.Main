@@ -213,6 +213,49 @@ div.Mod_Download_Description {
 	overflow-y: hidden;
 }
 
+div.Mod_Support_Banner {
+	background-color: lemonchiffon;
+	
+	border-style: solid;
+	border-color: lightgray;
+	border-width: 1px;
+	border-radius: 20px;
+	
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 100px;
+	padding-left: 100px;
+	
+	margin-bottom: 50px;
+	
+	text-align: center
+}
+
+a.Mod_Support_Banner_Button {
+	width: 500px;
+	height: 50px;
+	display: inline-block;
+	
+	text-align: center;
+	text-decoration: none;
+	color: inherit;
+		
+	border-style: solid;
+	border-width: 1px;
+	border-color: mistyrose;
+	background-color: mistyrose;
+
+	line-height: 50px;
+	
+	border-radius: 10px;
+
+	margin-top: 10px;
+}
+
+div.Mod_Support_Banner_Button_Text {
+	height: 100%;
+}
+
 div.Mod_Tab hr {
 	margin-top: 50px;
 	margin-bottom: 50px;

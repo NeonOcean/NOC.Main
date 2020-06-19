@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang = "en">
 	<head>
-		<title>NeonOcean - Order</title>
+		<title>NeonOcean - Sims 4 - Order</title>
 		<meta charset="utf-8"/>
 		
 		<meta name = "dark_page" content = "false" />
@@ -33,7 +33,9 @@
 			<div class = "Dark_Dialog_Container">
 				<div class = "Dark_Dialog">
 					<div id = "Dark_Page_Dialog_Text" class = "Dark_Dialog_Text"><!--
-						-->This page contains sexy content, you must be 18 years or older to view it. You can click continue to enable dark mode and view the page, otherwise you should go back to a safe page.<!--
+						-->This page contains sexy content, you must be 18 years or older to view it. You can click continue to enable dark mode and view the page, otherwise you should go back to a safe page.
+						
+						</br></br>You are an elite hacker, congratulations.<!--
 					--></div>
 					
 					<span id = "Dark_Page_Dialog_Continue_Button" class = "Dark_Dialog_Continue_Button" onclick = "Dark_PageDialogCallback(); AnalyticEvents_DarkPageDialogResponse('Continue');">
@@ -49,7 +51,8 @@
 			<div class = "Dark_Dialog_Container">
 				<div class = "Dark_Dialog">					
 					<div id = "Dark_Enable_Dialog_Text" class = "Dark_Dialog_Text"><!--
-						-->Enabling dark mode will allow you to view sexy content across this site. You must be 18 years or older to use it.<!--
+						-->Enabling dark mode will allow you to view sexy content across this site. You must be 18 years or older to use it.
+						</br></br>You are an elite hacker, congratulations.<!--
 					--></div>
 					
 					<span class = "Dark_Dialog_Continue_Button" onclick = "Dark_EnableDialogCallback(true); AnalyticEvents_DarkEnableDialogResponse('Continue');">
@@ -224,18 +227,30 @@
 									<h1>Mod Links</h1>
 									<p>
 										Documentation - <a href = "https://doc.mods.neonoceancreations.com/s4/order">https://doc.mods.neonoceancreations.com/s4/order</a><br/>
-										Sources Repository - <a href = "https://github.com/NeonOcean/Order">https://github.com/NeonOcean/Order</a>
+										Sources Repository - <a href = "https://github.com/NeonOcean/S4.Order">https://github.com/NeonOcean/S4.Order</a>
 									</p><!--
 								--></div>
 								
 								<div id = "Mod_Files_Tab" class = "Mod_Tab"><!--
-									--><div class = "Mod_Download">
+									--><div class = "Mod_Support_Banner">
+										<div class = "Mod_Support_Banner_Text"><!--
+											--><i>NeonOcean is reliant on people like you to not starve, and also, to continue working on and improve her mods. You will also get some nice stuff from helping out, such as early access to new versions.</i><!--
+										--></div>
+										
+										<a class = "Mod_Support_Banner_Button" target = "_blank" href = "https://www.patreon.com/NeonOcean">
+											<div class = "Mod_Support_Banner_Button_Text"><!--
+												-->Support NeonOcean ❤️<!--
+											--></div>
+										</a>
+									</div>
+									
+									<div class = "Mod_Download">
 										<div class = "Mod_Download_Header">
 											<span class = "Mod_Download_Name"><!--
 												-->Installer (Windows Only)<!--
 											--></span>
 											
-											<a class = "Mod_Download_Button" href = "https://dist.mods.neonoceancreations.com/mods/neonocean.order/installer">
+											<a class = "Mod_Download_Button" href = "https://dist.mods.neonoceancreations.com/mods/neonocean.s4.order/installer">
 												<div class = "Mod_Header_Download_Button_Text"><!--
 													-->Download<!--
 												--></div>
@@ -253,7 +268,7 @@
 												-->Files (Manual Installation)<!--
 											--></span>
 											
-											<a class = "Mod_Download_Button" href = "https://dist.mods.neonoceancreations.com/mods/neonocean.order/files">
+											<a class = "Mod_Download_Button" href = "https://dist.mods.neonoceancreations.com/mods/neonocean.s4.order/files">
 												<div class = "Mod_Download_Button_Text"><!--
 													-->Download<!--
 												--></div>
@@ -271,7 +286,7 @@
 												-->Sources<!--
 											--></span>
 											
-											<a class = "Mod_Download_Button" href = "https://dist.mods.neonoceancreations.com/mods/neonocean.order/sources">
+											<a class = "Mod_Download_Button" href = "https://dist.mods.neonoceancreations.com/mods/neonocean.s4.order/sources">
 												<div class = "Mod_Header_Download_Button_Text"><!--
 													-->Download<!--
 												--></div>
@@ -285,7 +300,7 @@
 									
 									<div><!--
 										-->If you would like to download outdated versions of this mod you can do so here:<br/><!--
-									--><a href = "https://dist.mods.neonoceancreations.com/mods/neonocean.order">Previous versions</a><!--
+									--><a href = "https://dist.mods.neonoceancreations.com/mods/neonocean.s4.order">Previous versions</a><!--
 									--></div><!--
 								--></div>
 								
@@ -300,13 +315,28 @@
 									
 									<h1>Reporting Issues</h1>
 									<p>If you are experiencing unexpected problems with this mod you can report your troubles via this mod's Github page. Be sure to check this mod's documentation to learn the proper procedure for reporting bugs.</p>
-									<a href = "https://github.com/NeonOcean/Order/Issues">https://github.com/NeonOcean/Order/issues</a><br/>
+									<a href = "https://github.com/NeonOcean/S4.Order/Issues">https://github.com/NeonOcean/S4.Order/issues</a><br/>
 									<a href = "https://doc.mods.neonoceancreations.com/s4/order/general/reporting-bugs">Bug reporting guide</a><!--
 								--></div>
 								
 								<div id = "Mod_Changes_Tab" class = "Mod_Tab"><!--
 									--><h1>Change Log</h1>
 									<br/>
+									<h2>v1.4.0 ()</h2>
+									<h3>Changes</h3>
+									<ul>
+									<li>Version numbers now follow the semantic versioning specification. https://semver.org/</li>
+									<li>Changed this mod's namespace from NeonOcean.Order to NeonOcean.S4.Order.</li>
+									<li>Changed load order file naming scheme, check the documentation for more information.</li>
+									<li>Updated mod information file loading to follow changes in the mod Main.</li>
+									<li>Settings are now listed in dialog instead of an interaction menu.</li>
+									<li>Added icons to some mod interactions and interaction categories.</li>
+									</ul>
+									<h3>Fixed bugs</h3>
+									<ul>
+									<li>Fixed mod documentation links.</li>
+									</ul>
+									<hr>
 									<h2>v1.3.0 (July 15, 2019)</h2>
 									<h3>Changes</h3>
 									<ul>

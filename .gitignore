@@ -3,3 +3,6 @@
 **/.idea/**/misc.xml
 **/.idea/**/workspace.xml
 **/.idea/**/dictionaries
+
+/Build
+/Documents/Build

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang = "en">
 	<head>
-		<title>NeonOcean - Main</title>
+		<title>NeonOcean - Sims 4 - Main</title>
 		<meta charset="utf-8"/>
 		
 		<meta name = "dark_page" content = "false" />
@@ -33,7 +33,9 @@
 			<div class = "Dark_Dialog_Container">
 				<div class = "Dark_Dialog">
 					<div id = "Dark_Page_Dialog_Text" class = "Dark_Dialog_Text"><!--
-						-->This page contains sexy content, you must be 18 years or older to view it. You can click continue to enable dark mode and view the page, otherwise you should go back to a safe page.<!--
+						-->This page contains sexy content, you must be 18 years or older to view it. You can click continue to enable dark mode and view the page, otherwise you should go back to a safe page.
+						
+						</br></br>You are an elite hacker, congratulations.<!--
 					--></div>
 					
 					<span id = "Dark_Page_Dialog_Continue_Button" class = "Dark_Dialog_Continue_Button" onclick = "Dark_PageDialogCallback(); AnalyticEvents_DarkPageDialogResponse('Continue');">
@@ -49,7 +51,8 @@
 			<div class = "Dark_Dialog_Container">
 				<div class = "Dark_Dialog">					
 					<div id = "Dark_Enable_Dialog_Text" class = "Dark_Dialog_Text"><!--
-						-->Enabling dark mode will allow you to view sexy content across this site. You must be 18 years or older to use it.<!--
+						-->Enabling dark mode will allow you to view sexy content across this site. You must be 18 years or older to use it.
+						</br></br>You are an elite hacker, congratulations.<!--
 					--></div>
 					
 					<span class = "Dark_Dialog_Continue_Button" onclick = "Dark_EnableDialogCallback(true); AnalyticEvents_DarkEnableDialogResponse('Continue');">
@@ -239,18 +242,30 @@
 									<h1>Mod Links</h1>
 									<p>
 										Documentation - <a href = "https://doc.mods.neonoceancreations.com/s4/main">https://doc.mods.neonoceancreations.com/s4/main</a><br/>
-										Sources Repository - <a href = "https://github.com/NeonOcean/Main">https://github.com/NeonOcean/Main</a>
+										Sources Repository - <a href = "https://github.com/NeonOcean/S4.Main">https://github.com/NeonOcean/S4.Main</a>
 									</p><!--
 								--></div>
 								
 								<div id = "Mod_Files_Tab" class = "Mod_Tab"><!--
-									--><div class = "Mod_Download">
+									--><div class = "Mod_Support_Banner">
+										<div class = "Mod_Support_Banner_Text"><!--
+											--><i>NeonOcean is reliant on people like you to not starve, and also, to continue working on and improve her mods. You will also get some nice stuff from helping out, such as early access to new versions.</i><!--
+										--></div>
+										
+										<a class = "Mod_Support_Banner_Button" target = "_blank" href = "https://www.patreon.com/NeonOcean">
+											<div class = "Mod_Support_Banner_Button_Text"><!--
+												-->Support NeonOcean ❤️<!--
+											--></div>
+										</a>
+									</div>
+									
+									<div class = "Mod_Download">
 										<div class = "Mod_Download_Header">
 											<span class = "Mod_Download_Name"><!--
 												-->Installer (Windows Only)<!--
 											--></span>
 											
-											<a class = "Mod_Download_Button" href = "https://dist.mods.neonoceancreations.com/mods/neonocean.main/installer">
+											<a class = "Mod_Download_Button" href = "https://dist.mods.neonoceancreations.com/mods/neonocean.s4.main/installer">
 												<div class = "Mod_Header_Download_Button_Text"><!--
 													-->Download<!--
 												--></div>
@@ -268,7 +283,7 @@
 												-->Files (Manual Installation)<!--
 											--></span>
 											
-											<a class = "Mod_Download_Button" href = "https://dist.mods.neonoceancreations.com/mods/neonocean.main/files">
+											<a class = "Mod_Download_Button" href = "https://dist.mods.neonoceancreations.com/mods/neonocean.s4.main/files">
 												<div class = "Mod_Download_Button_Text"><!--
 													-->Download<!--
 												--></div>
@@ -286,7 +301,7 @@
 												-->Sources<!--
 											--></span>
 											
-											<a class = "Mod_Download_Button" href = "https://dist.mods.neonoceancreations.com/mods/neonocean.main/sources">
+											<a class = "Mod_Download_Button" href = "https://dist.mods.neonoceancreations.com/mods/neonocean.s4.main/sources">
 												<div class = "Mod_Header_Download_Button_Text"><!--
 													-->Download<!--
 												--></div>
@@ -300,7 +315,7 @@
 									
 									<div><!--
 										-->If you would like to download outdated versions of this mod you can do so here:<br/><!--
-									--><a href = "https://dist.mods.neonoceancreations.com/mods/neonocean.main">Previous versions</a><!--
+									--><a href = "https://dist.mods.neonoceancreations.com/mods/neonocean.s4.main">Previous versions</a><!--
 									--></div><!--
 								--></div>
 								
@@ -315,13 +330,52 @@
 									
 									<h1>Reporting Issues</h1>
 									<p>If you are experiencing unexpected problems with this mod you can report your troubles via this mod's Github page. Be sure to check this mod's documentation to learn the proper procedure for reporting bugs.</p>
-									<a href = "https://github.com/NeonOcean/Main/Issues">https://github.com/NeonOcean/Main/issues</a><br/>
+									<a href = "https://github.com/NeonOcean/S4.Main/Issues">https://github.com/NeonOcean/S4.Main/issues</a><br/>
 									<a href = "https://doc.mods.neonoceancreations.com/s4/main/general/reporting-bugs">Bug reporting guide</a><!--
 								--></div>
 								
 								<div id = "Mod_Changes_Tab" class = "Mod_Tab"><!--
 									--><h1>Change Log</h1>
 									<br/>
+									<h2>v2.0.0 ()</h2>
+									<h3>Mod Information Files</h3>
+									<ul>
+									<li>Mod information file names no longer need to start with 'NeonOcean-Mod' it just needs to contain it.</li>
+									<li>Version numbers now follow the semantic versioning specification. https://semver.org/</li>
+									<li>Changed the format of the 'Distribution' value in mod information files.</li>
+									</ul>
+									<h3>New Features</h3>
+									<ul>
+									<li>Added new event system.</li>
+									<li>Added new object saving system.</li>
+									<li>A new debug interaction allows users to load specific mod save folders, in the event an incorrect one is loaded.</li>
+									<li>Added in-game notifications to warn players when any mod save does not match the game's save.</li>
+									<li>Settings are now listed in dialog instead of an interaction menu.</li>
+									<li>Created settings list dialog framework which this mod moved over to using.</li>
+									<li>Users can now be notified of mod updates without requiring the creation of python code.</li>
+									</ul>
+									<h3>Changes</h3>
+									<ul>
+									<li>Changed this mod's namespace from NeonOcean.Main to NeonOcean.S4.Main.</li>
+									<li>Saving objects can no longer register themselves to a saving object handler, it should now be done manually.</li>
+									<li>Saving objects now take the save file paths as parameters for loading and saving methods instead of save slot ids.</li>
+									<li>Improved new debug logging to prevent the build up of large log files.</li>
+									<li>Added icons to some mod interactions and interaction categories.</li>
+									<li>Only one update notification is now shown for all outdated mods, users can select mod websites to visit from a picker dialog.</li>
+									<li>Reworked the interaction object registration system, it now supports different object interactions lists.</li>
+									</ul>
+									<h3>Fixed bugs</h3>
+									<ul>
+									<li>Persistence objects for saving sections no longer break when loading non existent data in the saving section.</li>
+									<li>The built in saving handler now correctly logs and warns the player about save failures.</li>
+									<li>Mod save backups will now correctly follow their tied game backups when overriding a save.</li>
+									<li>__init__ modules are now correctly handled by the loading system.</li>
+									<li>Fixed mod documentation links.</li>
+									<li>Patched functions and methods will now return a value when patched in the custom or replace modes.</li>
+									<li>Main will no longer incorrectly warn about python-less mods not being loaded.</li>
+									<li>Mods without a load order file will now still load even if the mod Order is installed.</li>
+									</ul>
+									<hr>
 									<h2>v1.3.0 (July 15, 2019)</h2>
 									<h3>New Features</h3>
 									<ul>
@@ -410,12 +464,7 @@
 								<div id = "Mod_Development_Tab" class = "Mod_Tab"><!--
 									--><h1>Plans</h1>
 									
-									<h3>Object finder For Interactions (Status: Framework Implemented)</h3>
-									<ul>
-									<li>Find all objects of a type specified by the interaction's tuning and add the interaction to it.</li>
-									<li>Examples of object types you could set the interaction to would be all beds or all computers and more.</li>
-									<li>This system could potentially allow for the support of new content with out updating mods, and support for custom content automatically.</li>
-									</ul><!--
+									<p>There are currently no features that I wanted to include, but are not already implemented.</p><!--
 								--></div>
 							</div>
 						</div>

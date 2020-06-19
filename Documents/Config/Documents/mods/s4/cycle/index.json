@@ -2,13 +2,13 @@
 	"FileExtension": "html",
 
 	"Values": {
-		"Title": "NeonOcean - Sims 4 - Main",
+		"Title": "NeonOcean - Sims 4 - Cycle",
 		
 		"DarkPage": "false",
 		
 		"HeaderExtra": "",
 				
-		"ModNamespace": "NeonOcean.S4.Main"
+		"ModNamespace": "NeonOcean.S4.Cycle"
 	},
 	
 	"Scripts": {

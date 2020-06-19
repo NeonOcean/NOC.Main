@@ -2,13 +2,13 @@
 	"FileExtension": "html",
 
 	"Values": {
-		"Title": "NeonOcean - Debug",
+		"Title": "NeonOcean - Sims 4 - Debug",
 		
 		"DarkPage": "false",
 		
 		"HeaderExtra": "",
 				
-		"ModNamespace": "NeonOcean.Debug"
+		"ModNamespace": "NeonOcean.S4.Debug"
 	},
 	
 	"Scripts": {

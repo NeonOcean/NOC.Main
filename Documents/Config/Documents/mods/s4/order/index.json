@@ -2,13 +2,13 @@
 	"FileExtension": "html",
 
 	"Values": {
-		"Title": "NeonOcean - Order",
+		"Title": "NeonOcean - Sims 4 - Order",
 		
 		"DarkPage": "false",
 		
 		"HeaderExtra": "",
 				
-		"ModNamespace": "NeonOcean.Order"
+		"ModNamespace": "NeonOcean.S4.Order"
 	},
 	
 	"Scripts": {

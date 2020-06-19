@@ -53,6 +53,8 @@ class ModConfig:
 		self.Mod = Mods.GetMod(self.Namespace)  # type: Mods.Mod
 
 	def LoadModDictionary (self, modFilePath: str):
+		modFileName = os.path.split(modFilePath)[1]  # type: str
+
 		try:
 			with open(modFilePath) as modFile:
 				modDictionary = json.JSONDecoder().decode(modFile.read())  # type: dict
@@ -66,7 +68,7 @@ class ModConfig:
 				raise Exception("Missing attribute '" + attributeName + "' from the mod file at '" + modFilePath + "'.")
 
 			if type(attributeValue) != attributeType:
-				raise Exception("Attribute '" + attributeName + "' in the mod file '" + "' is the wrong type. We expected the type '" + Types.GetFullName(attributeType) + " but got '" + Types.GetFullName(attributeValue) + "'.")
+				raise Exception("Attribute '" + attributeName + "' in the mod file '" + modFileName +  "' is the wrong type. We expected the type '" + Types.GetFullName(attributeType) + " but got '" + Types.GetFullName(attributeValue) + "'.")
 
 			setattr(self, attributeName, attributeValue)
 

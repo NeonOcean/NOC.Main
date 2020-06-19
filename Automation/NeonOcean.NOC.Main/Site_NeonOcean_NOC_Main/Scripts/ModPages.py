@@ -90,7 +90,7 @@ def _GetOverviewTabText (modConfig: Mods.ModConfig) -> str:
 	return Formatting.FormatDictionary(overviewTabTemplate, overviewTabFormatting)
 
 def _GetFilesTabText (modConfig: Mods.ModConfig) -> str:
-	with open(os.path.join(Paths.DocumentsSourcesPath, modConfig.FilesTabSource)) as filesTabTemplateFile:
+	with open(os.path.join(Paths.DocumentsSourcesPath, modConfig.FilesTabSource), encoding = "utf-8") as filesTabTemplateFile:
 		filesTabTemplate = filesTabTemplateFile.read()  # type: str
 
 	filesTabFormatting = FormattingDict()  # type: typing.Dict[str, typing.Any]
