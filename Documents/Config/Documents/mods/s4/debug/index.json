@@ -6,7 +6,7 @@
 		
 		"DarkPage": "false",
 		
-		"HeaderExtra": "",
+		"HeaderExtra": "<meta name = \"mod_HasRequirements\" content = \"true\" />",
 				
 		"ModNamespace": "NeonOcean.S4.Debug"
 	},

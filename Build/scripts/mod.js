@@ -17,7 +17,14 @@ Mod_TabNames = [
 	"Development"
 ];
 
+Mod_TabOpenedCallbacks = {
+	"Files": Mod_OnFilesTabOpened
+};
+
 Mod_DefaultTab = "Overview";
+
+Mod_RequirementWarningDialogIdentifier = "Requirement_Warning_Dialog";
+Mod_HasRequirementsAttribute = "mod_HasRequirements";
 
 function Mod_OnPageLoad () {
 	startTabName = null;
@@ -95,6 +102,12 @@ function Mod_OpenTab (targetTabName, changeHash) {
 	if(changeHash) {
 		location.hash = "#" + targetTabName.toLowerCase();
 	}
+	
+	tabOpenedCallback = Mod_TabOpenedCallbacks["Files"];
+	
+	if(tabOpenedCallback != undefined) {
+		tabOpenedCallback();
+	}
 }
 
 function Mod_OpenOverviewTab () {
@@ -123,6 +136,73 @@ function Mod_OpenChangesTab () {
 
 function Mod_OpenDevelopmentTab () {
 	Mod_OpenTab("Development", true);
+}
+
+function Mod_OnFilesTabOpened () {
+	Mod_ShowRequirementsWarning();
+}
+
+function Mod_ModHasRequirements () {
+	metaElements = document.getElementsByTagName("meta");
+	
+	for(var metaElementIndex = 0; metaElementIndex < metaElements.length; metaElementIndex++) {
+		if(metaElements[metaElementIndex].getAttribute("Name") == Mod_HasRequirementsAttribute) {
+			hasRequirements = false;
+			
+			hasRequirementsString = metaElements[metaElementIndex].getAttribute("content");
+			hasRequirementsString = hasRequirementsString.toLowerCase();
+			
+			if(hasRequirementsString == "true") {
+				hasRequirements = true;
+			} else if(hasRequirementsString != "false") {
+				console.error("Dark page meta data value is not a boolean.");
+			}
+			
+			return hasRequirements;
+		}
+	}
+	
+	return false;
+}
+
+function Mod_ShowRequirementsWarning (ignoreDisabled = false, ignoreNoRequirements = false) {
+	if(!ignoreNoRequirements) {
+		if(!Mod_ModHasRequirements) {
+			return;
+		}
+	}
+	
+	if(!ignoreDisabled) {
+		if(window.Mod_RequirementWarningDialogEnabled != undefined && !window.Mod_RequirementWarningDialogEnabled) {
+			return;
+		}
+	}
+	
+	dialog = document.getElementById("Requirement_Warning_Dialog");
+	
+	if(dialog) {
+		dialog.style.display = null;
+	} else {
+		console.error("Couldn't find the requirement warning dialog dialog for in this document.");
+	}
+}
+
+function Mod_HideRequirementsWarning () {
+	dialog = document.getElementById("Requirement_Warning_Dialog");
+	
+	if(dialog) {
+		dialog.style.display = "none";
+	} else {
+		console.error("Couldn't find the requirement warning dialog dialog for in this document.");
+	}
+}
+
+function Mod_DisableRequirementsWarning () {
+	window.Mod_RequirementWarningDialogEnabled = false;
+}
+
+function Mod_EnableRequirementsWarning () {
+	window.Mod_RequirementWarningDialogEnabled = true;
 }
 
 window.addEventListener("load", Mod_OnPageLoad);

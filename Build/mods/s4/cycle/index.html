@@ -4,7 +4,7 @@
 		<title>NeonOcean - Sims 4 - Cycle</title>
 		<meta charset="utf-8"/>
 		
-		<meta name = "dark_page" content = "false" />
+		<meta name = "dark_DarkPage" content = "false" />
 		
 		<base href = "../../../" />
 		
@@ -25,7 +25,7 @@
 		<script src = "scripts/dark.js"></script>
 		<script src = "scripts/mod.js"></script>
 		
-		
+		<meta name = "mod_HasRequirements" content = "true" />
 	</head>
 
 	<body>
@@ -33,9 +33,7 @@
 			<div class = "Dark_Dialog_Container">
 				<div class = "Dark_Dialog">
 					<div id = "Dark_Page_Dialog_Text" class = "Dark_Dialog_Text"><!--
-						-->This page contains sexy content, you must be 18 years or older to view it. You can click continue to enable dark mode and view the page, otherwise you should go back to a safe page.
-						
-						</br></br>You are an elite hacker, congratulations.<!--
+						-->This page contains sexy content, you must be 18 years or older to view it. You can click continue to enable dark mode and view the page, otherwise you should go back to a safe page.<!--
 					--></div>
 					
 					<span id = "Dark_Page_Dialog_Continue_Button" class = "Dark_Dialog_Continue_Button" onclick = "Dark_PageDialogCallback(); AnalyticEvents_DarkPageDialogResponse('Continue');">
@@ -51,8 +49,7 @@
 			<div class = "Dark_Dialog_Container">
 				<div class = "Dark_Dialog">					
 					<div id = "Dark_Enable_Dialog_Text" class = "Dark_Dialog_Text"><!--
-						-->Enabling dark mode will allow you to view sexy content across this site. You must be 18 years or older to use it.
-						</br></br>You are an elite hacker, congratulations.<!--
+						-->Enabling dark mode will allow you to view sexy content across this site. You must be 18 years or older to use it.<!--
 					--></div>
 					
 					<span class = "Dark_Dialog_Continue_Button" onclick = "Dark_EnableDialogCallback(true); AnalyticEvents_DarkEnableDialogResponse('Continue');">
@@ -282,7 +279,23 @@
 								--></div>
 								
 								<div id = "Mod_Files_Tab" class = "Mod_Tab"><!--
-									--><div class = "Mod_Support_Banner">
+									--><div id = "Requirement_Warning_Dialog" class = "Requirement_Warning_Dialog_Background" style = "display:none">
+										<div class = "Requirement_Warning_Dialog_Container">
+											<div class = "Requirement_Warning_Dialog">					
+												<div class = "Requirement_Warning_Dialog_Text"><!--
+													-->This mod relies on one or more mods to function. Please ensure you visit the <b>"Requirements"</b> tab to find out what other mods you need.<!--
+												--></div>
+												
+												<span class = "Requirement_Warning_Dialog_Continue_Button" onclick = "Mod_HideRequirementsWarning(); Mod_DisableRequirementsWarning();">
+													<div class = "Requirement_Warning_Dialog_Continue_Button_Text"><!--
+														-->I Understand<!--
+													--></div>
+												</span>
+											</div>
+										</div>
+									</div>
+									
+									<div class = "Mod_Support_Banner">
 										<div class = "Mod_Support_Banner_Text"><!--
 											--><i>NeonOcean is reliant on people like you to not starve, and also, to continue working on and improve her mods. You will also get some nice stuff from helping out, such as early access to new versions.</i><!--
 										--></div>

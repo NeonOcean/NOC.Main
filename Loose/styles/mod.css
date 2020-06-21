@@ -1,7 +1,3 @@
-div.Mod_Header {
-	
-}
-
 img.Mod_Header_Banner {
 	float: left;
 	
@@ -259,6 +255,94 @@ div.Mod_Support_Banner_Button_Text {
 div.Mod_Tab hr {
 	margin-top: 50px;
 	margin-bottom: 50px;
+}
+
+div.Requirement_Warning_Dialog_Background {	
+	position: fixed;
+	
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	
+	background-color: ghostwhite;
+	
+	z-index: 50;
+}
+	
+div.Requirement_Warning_Dialog_Container {
+	width: 500px;
+	height: 200px;
+	
+	left: 50%;
+	top: 50%;
+	
+	margin-left: -250px;
+	margin-top: -100px;
+	
+	position: relative;
+	
+	line-height: 300px;
+	text-align: center;
+}
+
+div.Requirement_Warning_Dialog {
+	width: inherit;
+	height: inherit;
+	
+	line-height: normal;
+	
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 4px;
+	border-color: gainsboro;
+	
+	background-color: white;
+}
+
+div.Requirement_Warning_Dialog_Text {
+	top: 25%;
+	bottom: 75%;
+	margin-left: 5%;
+	margin-right: 5%;
+	
+	position: relative;
+}
+
+span.Requirement_Warning_Dialog_Continue_Button {
+	width: 37.5%;
+	height: 40px;
+	
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 4px;
+	
+	position: absolute;
+	
+	line-height: 38px;
+	
+	cursor: pointer;
+	
+	margin: 0px 31.25% 20px 31.25%;
+	
+	background-color: mistyrose;
+	border-color: mistyrose;
+	
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+div.Requirement_Warning_Dialog_Continue_Button_Text {
+	width: 100%;
+	height: 100%;
+	
+	position: absolute;
 }
 
 

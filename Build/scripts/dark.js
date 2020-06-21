@@ -4,10 +4,10 @@ Dark_PageDialogIdentifier = "Dark_Page_Dialog";
 Dark_EnabledCheckboxIdentifier = "Header_Dark_Checkbox_Enabled";
 Dark_DisableCheckboxdIdentifier = "Header_Dark_Checkbox_Disabled";
 
-Dark_PageAttribute = "dark_page";
-Dark_ModeBehaviourAttribute = "data-dark_mode_behaviour";
+Dark_PageAttribute = "dark_DarkPage";
+Dark_ModeBehaviourAttribute = "data-dark_DarkModeBehaviour";
 
-Dark_ModeCookieKey = "dark_mode";
+Dark_ModeCookieKey = "dark_DarkMode";
 
 function Dark_OnPageLoad () {
 	if(!Dark_IsDarkModeActive()) {
@@ -202,5 +202,3 @@ function Dark_PageDialogCallback () {
 	
 	Dark_HidePageDialog();
 }
-
-//window.addEventListener("load", Dark_OnPageLoad);
