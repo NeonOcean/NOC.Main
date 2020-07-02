@@ -23,9 +23,9 @@ ModPageFormattingTemplate = {
 	"Name": lambda modConfig: modConfig.Name,
 	"BannerURL": lambda modConfig: modConfig.BannerURL,
 	"DocumentationURL": lambda modConfig: _documentationURL + "/s4/" + modConfig.Mod.GetName().lower() if modConfig.Mod.GetName() is not None else _documentationURL,
-	"Version": lambda modConfig: modConfig.Mod.ReleaseLatest.Version,
+	"Version": lambda modConfig: str(modConfig.Mod.ReleaseLatest.Version),
 	"UpdateDate": lambda modConfig: modConfig.Mod.ReleaseLatest.ReleaseDateObject.strftime("%B %d, %Y"),
-	"GameVersion": lambda modConfig: modConfig.Mod.ReleaseLatest.GameVersion,
+	"GameVersion": lambda modConfig: str(modConfig.Mod.ReleaseLatest.GameVersion),
 
 	"OverviewTab": lambda modConfig: _GetOverviewTabText(modConfig),
 	"FilesTab": lambda modConfig: _GetFilesTabText(modConfig),
