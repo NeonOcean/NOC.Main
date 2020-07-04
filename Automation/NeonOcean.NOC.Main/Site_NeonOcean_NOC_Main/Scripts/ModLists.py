@@ -10,6 +10,7 @@ ModsListEntryFormattingTemplate = {
 	"PageURL": lambda modConfig: modConfig.PageURL,
 	"PreviewURL": lambda modConfig: modConfig.PreviewURL,
 	"Version": lambda modConfig: str(modConfig.Mod.ReleaseLatest.Version),
+	"Game": lambda modConfig: modConfig.Mod.Game,
 	"UpdateDate": lambda modConfig: modConfig.Mod.ReleaseLatest.ReleaseDateObject.strftime("%B %d, %Y"),
 
 	"Description": lambda modConfig: modConfig.Description

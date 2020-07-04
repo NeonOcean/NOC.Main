@@ -22,9 +22,10 @@ ModPageFormattingTemplate = {
 	"Namespace": lambda modConfig: modConfig.Namespace,
 	"Name": lambda modConfig: modConfig.Name,
 	"BannerURL": lambda modConfig: modConfig.BannerURL,
-	"DocumentationURL": lambda modConfig: _documentationURL + "/s4/" + modConfig.Mod.GetName().lower() if modConfig.Mod.GetName() is not None else _documentationURL,
+	"DocumentationURL": lambda modConfig: _documentationURL  + "/" + modConfig.Mod.GameShortened.lower() + "/" + modConfig.Mod.GetName().lower() if modConfig.Mod.GetName() is not None else _documentationURL,
 	"Version": lambda modConfig: str(modConfig.Mod.ReleaseLatest.Version),
 	"UpdateDate": lambda modConfig: modConfig.Mod.ReleaseLatest.ReleaseDateObject.strftime("%B %d, %Y"),
+	"Game": lambda modConfig: modConfig.Mod.Game,
 	"GameVersion": lambda modConfig: str(modConfig.Mod.ReleaseLatest.GameVersion),
 
 	"OverviewTab": lambda modConfig: _GetOverviewTabText(modConfig),
@@ -36,16 +37,16 @@ ModPageFormattingTemplate = {
 }  # type: typing.Dict[str, typing.Callable[[Mods.ModConfig], typing.Any]]
 
 OverviewTabFormattingTemplate = {
-	"DocumentationURL": lambda modConfig: _documentationURL + "/s4/" + modConfig.Mod.GetName().lower() if modConfig.Mod.GetName() is not None else _documentationURL,
+	"DocumentationURL": lambda modConfig: _documentationURL + "/" + modConfig.Mod.GameShortened.lower() + "/" + modConfig.Mod.GetName().lower() if modConfig.Mod.GetName() is not None else _documentationURL,
 }  # type: typing.Dict[str, typing.Callable[[Mods.ModConfig], typing.Any]]
 
 FilesTabFormattingTemplate = {
 	"InstallerURL": lambda modConfig: _distributionURL + "/mods/" + modConfig.Namespace.lower() + "/installer",
 	"FilesURL": lambda modConfig: _distributionURL + "/mods/" + modConfig.Namespace.lower() + "/files",
-	"FilesInstallationGuideURL": lambda modConfig: _documentationURL + "/s4/" + modConfig.Mod.GetName().lower() + "/general/installation" if modConfig.Mod.GetName() is not None else _documentationURL,
+	"FilesInstallationGuideURL": lambda modConfig: _documentationURL + "/" + modConfig.Mod.GameShortened.lower() + "/" + modConfig.Mod.GetName().lower() + "/general/installation" if modConfig.Mod.GetName() is not None else _documentationURL,
 
 	"SourcesURL": lambda modConfig: _distributionURL + "/mods/" + modConfig.Namespace.lower() + "/sources",
-	
+
 	"DownloadIndexURL": lambda modConfig: _distributionURL + "/mods/" + modConfig.Namespace.lower()
 }  # type: typing.Dict[str, typing.Callable[[Mods.ModConfig], typing.Any]]
 
@@ -54,7 +55,7 @@ RequirementsTabFormattingTemplate = {
 }  # type: typing.Dict[str, typing.Callable[[Mods.ModConfig], typing.Any]]
 
 IssuesTabFormattingTemplate = {
-	"BugReportingGuideURL": lambda modConfig: _documentationURL + "/s4/" + modConfig.Mod.GetName().lower() + "/general/reporting-bugs" if modConfig.Mod.GetName() is not None else _documentationURL,
+	"BugReportingGuideURL": lambda modConfig: _documentationURL + "/" + modConfig.Mod.GameShortened.lower() + "/" + modConfig.Mod.GetName().lower() + "/general/reporting-bugs" if modConfig.Mod.GetName() is not None else _documentationURL,
 }  # type: typing.Dict[str, typing.Callable[[Mods.ModConfig], typing.Any]]
 
 ChangesTabFormattingTemplate = {

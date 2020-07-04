@@ -72,7 +72,7 @@ div.Mod_List_Entry_Description {
 	overflow-y: hidden;
 }
 
-span.Mod_List_Entry_Version, span.Mod_List_Entry_Update_Date {
+span.Mod_List_Entry_Game, span.Mod_List_Entry_Version, span.Mod_List_Entry_Update_Date {
 	width: 100%;
 	
 	bottom: 0px;
@@ -80,10 +80,17 @@ span.Mod_List_Entry_Version, span.Mod_List_Entry_Update_Date {
 	position: absolute;
 }
 
-span.Mod_List_Entry_Version {
+span.Mod_List_Entry_Game {
 	left: 0px;
 	
 	text-align: left;
+}
+
+span.Mod_List_Entry_Version {
+	left: 0px;
+	right: 0px;
+	
+	text-align: center;
 }
 
 span.Mod_List_Entry_Update_Date {

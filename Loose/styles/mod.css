@@ -85,7 +85,7 @@ table.Mod_Strip {
 }
 
 th.Mod_Strip_Item {
-	width: 33.333%;
+	width: 25%;
 	
 	position: relative;
 	
@@ -141,6 +141,24 @@ div.Mod_Tabs {
 	border-style: solid;
 	border-color: lightgray;
 	border-width: 1px;
+}
+
+div.Mod_Game_Banner {
+	background-color: ghostwhite;
+	
+	border-style: solid;
+	border-color: lightgray;
+	border-width: 1px;
+	border-radius: 20px;
+	
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 100px;
+	padding-left: 100px;
+	
+	margin-bottom: 50px;
+	
+	text-align: center
 }
 
 div.Mod_Download {
