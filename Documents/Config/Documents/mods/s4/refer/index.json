@@ -1,0 +1,25 @@
+{
+	"FileExtension": "html",
+
+	"Values": {
+		"Title": "NeonOcean - Sims 4 - Refer",
+		
+		"DarkPage": "false",
+		
+		"HeaderExtra": "<meta name = \"mod_HasRequirements\" content = \"true\" />",
+				
+		"ModNamespace": "NeonOcean.S4.Refer"
+	},
+	
+	"Scripts": {
+		"Content": {
+			"Module": "Site_NeonOcean_NOC_Main.Scripts.ModPages",
+			"Function": "GetModPageText",
+			"Inputs": [
+				"ModNamespace"
+			]
+		}
+	},
+
+	"TemplateConfig": "Normal.json"
+}

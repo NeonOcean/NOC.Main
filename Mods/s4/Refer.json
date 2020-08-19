@@ -1,0 +1,17 @@
+{
+	"Namespace": "NeonOcean.S4.Refer",
+	"Name": "Refers",
+	"PageURL": "mods/s4/refer",
+	"BannerURL": "mods/s4/refer/banner.png",
+	"PreviewURL": "mods/s4/refer/preview.png",
+	"GameIdentifier": "s4",
+	
+	"Description": "Refer is a mod that allows sims to finally be talked about with pronouns that match their gender identity.",
+	
+	"OverviewTabSource": "mods/s4/refer/overview.html",
+	"FilesTabSource": "mods/s4/refer/files.html",
+	"RequirementsTabSource": "mods/s4/refer/requirements.html",
+	"IssuesTabSource": "mods/s4/refer/issues.html",
+	"ChangesTabSource": "mods/s4/refer/changes.html",
+	"DevelopmentTabSource": "mods/s4/refer/development.html"
+}
